@@ -1,0 +1,662 @@
+WEBVTT
+
+1
+00:00:08.970 --> 00:00:11.145
+I consider Alberto Cairo's book,
+
+2
+00:00:11.145 --> 00:00:15.070
+The Truthful Art to be required
+reading for any data scientist.
+
+3
+00:00:15.070 --> 00:00:19.322
+In one book, he has managed to pack in
+a plethora of references to experts in
+
+4
+00:00:19.322 --> 00:00:24.400
+the field while still distilling
+down details into memorable lessons.
+
+5
+00:00:24.400 --> 00:00:27.486
+While we won't have an opportunity
+to cover everything he talks about.
+
+6
+00:00:27.486 --> 00:00:31.710
+I want to talk in this lecture about the
+foundation of the book in particular which
+
+7
+00:00:31.710 --> 00:00:36.140
+is a five part frame work for considering
+the qualities of an information graphic.
+
+8
+00:00:37.340 --> 00:00:41.470
+Importantly, Cairo says that these
+qualities are not independent of one
+
+9
+00:00:41.470 --> 00:00:43.690
+another and that they're interrelated.
+
+10
+00:00:43.690 --> 00:00:47.000
+So while I tend to be prone to
+reductionism, keep in mind that
+
+11
+00:00:47.000 --> 00:00:50.510
+the different qualities interact with one
+another as we go through the lecture.
+
+12
+00:00:52.110 --> 00:00:56.450
+The first quality of a good
+visualization is that it's truthful.
+
+13
+00:00:56.450 --> 00:00:59.686
+Now Cairo admits that truth could
+be considered subjective and
+
+14
+00:00:59.686 --> 00:01:03.914
+it's certainly on a continuum with some
+things being more truthful than others.
+
+15
+00:01:03.914 --> 00:01:06.890
+And then it might be impossible
+to establish an absolute truth.
+
+16
+00:01:08.290 --> 00:01:09.720
+But as data scientists,
+
+17
+00:01:09.720 --> 00:01:14.670
+he argues, we have two obligations
+when it comes to protecting the truth.
+
+18
+00:01:14.670 --> 00:01:18.774
+First, we have to be honest with ourselves
+when we clean and summarize data.
+
+19
+00:01:18.774 --> 00:01:22.482
+Are the activities we're engaging in
+likely to obscure a message because
+
+20
+00:01:22.482 --> 00:01:25.490
+of the limitations that we've applied?
+
+21
+00:01:25.490 --> 00:01:29.248
+We should consider explicitly each
+modification that we're making to
+
+22
+00:01:29.248 --> 00:01:29.817
+the data.
+
+23
+00:01:29.817 --> 00:01:32.600
+And make sure we are practicing
+what he calls self deception.
+
+24
+00:01:33.730 --> 00:01:37.160
+Skepticism is an important skill for
+data scientist.
+
+25
+00:01:37.160 --> 00:01:40.590
+And we often get so focus on looking for
+patterns that we reduce or
+
+26
+00:01:40.590 --> 00:01:44.800
+present data in ways which are inauthentic
+to the phenomena being described.
+
+27
+00:01:46.030 --> 00:01:48.310
+The second obligation is to our audience.
+
+28
+00:01:49.370 --> 00:01:53.360
+That is there are techniques and data
+science and information visualization,
+
+29
+00:01:53.360 --> 00:01:57.350
+which we can use to shine light
+on to specific pieces of data.
+
+30
+00:01:57.350 --> 00:01:59.480
+Indeed this is generally
+the point of the fields.
+
+31
+00:02:00.580 --> 00:02:05.240
+But if we omitted the ability of the
+reader to explore the phenomena more fully
+
+32
+00:02:05.240 --> 00:02:07.979
+this will generate doubt and
+cast distrust.
+
+33
+00:02:09.930 --> 00:02:11.880
+Cairo gives us a great examples of this,
+
+34
+00:02:11.880 --> 00:02:15.710
+using a chart inspired by one put
+out by the lobbying association.
+
+35
+00:02:15.710 --> 00:02:19.640
+The national cable and
+telecommunications association.
+
+36
+00:02:19.640 --> 00:02:23.035
+This association lobbies on
+behalf of US cable companies.
+
+37
+00:02:23.035 --> 00:02:27.238
+And provided a graphic which suggested
+that, after regulations were relaxed,
+
+38
+00:02:27.238 --> 00:02:30.470
+cable companies invested four
+times as much in the industry.
+
+39
+00:02:31.470 --> 00:02:33.650
+Now the original chart
+has been taken down, but
+
+40
+00:02:33.650 --> 00:02:36.090
+Cairo provides an example
+of what was visualized.
+
+41
+00:02:37.130 --> 00:02:41.497
+And we can see here, the title of
+the chart alone, was intended to draw
+
+42
+00:02:41.497 --> 00:02:46.621
+the reader to the conclusion, less
+regulation means more industry investment.
+
+43
+00:02:46.621 --> 00:02:49.430
+But there's some immediate
+problems with this graphic.
+
+44
+00:02:49.430 --> 00:02:52.030
+First, it's unclear whether
+the monies are adjusted for
+
+45
+00:02:52.030 --> 00:02:55.420
+inflation, which is a big issue when
+providing charts of financial data.
+
+46
+00:02:57.180 --> 00:03:00.630
+Second, the time spans for
+the two bars are different.
+
+47
+00:03:00.630 --> 00:03:04.510
+One covers a span of three years, while
+the other covers a span of four years.
+
+48
+00:03:05.580 --> 00:03:08.908
+Think of this through the lens
+of Tufts' Live Factor Analysis.
+
+49
+00:03:08.908 --> 00:03:12.310
+The bars have the same width, but
+don't represent the same period of time.
+
+50
+00:03:13.360 --> 00:03:15.900
+This is a completely
+unforgivable design choice.
+
+51
+00:03:17.250 --> 00:03:22.355
+And finally, there seems to be a bunch of
+missing data from years 1997 and 1998.
+
+52
+00:03:22.355 --> 00:03:28.490
+And the chart stops in the year 2003,
+but the information was tweeted in 2014.
+
+53
+00:03:28.490 --> 00:03:31.294
+What does a more honest
+view of the data look like?
+
+54
+00:03:31.294 --> 00:03:34.500
+Well Cairo tracked this down,
+and provided a line graph.
+
+55
+00:03:34.500 --> 00:03:36.080
+We can see that after regulation,
+
+56
+00:03:36.080 --> 00:03:40.050
+there were in fact years of
+sustained industry investment.
+
+57
+00:03:40.050 --> 00:03:44.742
+We see a slight drop after deregulation,
+then a massive spike in spending.
+
+58
+00:03:44.742 --> 00:03:47.957
+And then a significant fall
+from the period post 2002,
+
+59
+00:03:47.957 --> 00:03:50.729
+much of which is excluded
+from the original chart.
+
+60
+00:03:51.760 --> 00:03:55.030
+While it's unclear whether the dollar
+values are in fact corrected for
+
+61
+00:03:55.030 --> 00:03:59.440
+inflation, seems pretty unreasonable
+to suggest from this data alone
+
+62
+00:03:59.440 --> 00:04:03.170
+that regulations stems cable company
+investment and infrastructure.
+
+63
+00:04:04.680 --> 00:04:08.680
+The lesson here is that,
+while there's maybe no absolute truth,
+
+64
+00:04:08.680 --> 00:04:11.900
+there are ways of displaying data
+which are more truthful than others.
+
+65
+00:04:13.620 --> 00:04:17.050
+The second quality of a visualization
+to consider is whether it is
+
+66
+00:04:17.050 --> 00:04:17.700
+functional or not.
+
+67
+00:04:18.810 --> 00:04:22.885
+This again is continuum when we saw
+an example previously with the slides on
+
+68
+00:04:22.885 --> 00:04:25.560
+data-ink-ratio provided
+by Darkhorse Analytics.
+
+69
+00:04:26.620 --> 00:04:30.400
+If you expect your audience would
+want to compare two data series.
+
+70
+00:04:30.400 --> 00:04:34.850
+Direct labeling of them is one
+way to increase comprehension.
+
+71
+00:04:34.850 --> 00:04:38.380
+Well there are many heuristics for
+increasing functionality,
+
+72
+00:04:38.380 --> 00:04:41.792
+I would like you to remember
+the user test we did with.
+
+73
+00:04:41.792 --> 00:04:47.040
+I think now is an exciting time for
+understating situated human behavior.
+
+74
+00:04:47.040 --> 00:04:50.652
+The web has dramatically increased
+trainability to test social and
+
+75
+00:04:50.652 --> 00:04:54.146
+behavioral hypothesis that scale
+across diverse populations.
+
+76
+00:04:54.146 --> 00:04:58.222
+And crowd power and mechanical
+tuck are just two example of this.
+
+77
+00:04:58.222 --> 00:05:02.490
+Understanding how functional a given
+approach to a visualization is doesn't
+
+78
+00:05:02.490 --> 00:05:06.260
+necessarily require expensive
+ethnographic research.
+
+79
+00:05:06.260 --> 00:05:11.706
+It's now much easier to test
+hypotheses directly with crowd sources.
+
+80
+00:05:11.706 --> 00:05:15.849
+The third quality of visualization, Cairo
+shares is whether it is beautiful or not.
+
+81
+00:05:17.350 --> 00:05:20.950
+I think that this requires knowing
+a great deal about your audience.
+
+82
+00:05:20.950 --> 00:05:24.774
+There are different perceptions based
+on people's lived experiences and
+
+83
+00:05:24.774 --> 00:05:27.576
+aspects about themselves
+such as gender and culture.
+
+84
+00:05:27.576 --> 00:05:31.848
+There's a lot to building a beautiful
+information visualization experience,
+
+85
+00:05:31.848 --> 00:05:35.000
+which depends on situational and
+contextual factors too.
+
+86
+00:05:36.060 --> 00:05:38.680
+For instance,
+if you're building a chart for a report,
+
+87
+00:05:38.680 --> 00:05:42.910
+the colors and styles that you might
+choose, even down the font choice,
+
+88
+00:05:42.910 --> 00:05:46.990
+might be more related to beauty than for
+instance, function.
+
+89
+00:05:46.990 --> 00:05:50.760
+But the interplay of these elements is
+something which is difficult to ignore.
+
+90
+00:05:51.810 --> 00:05:56.520
+I wonder is this broad topic of beauty one
+of the conflationary factors of the chart
+
+91
+00:05:56.520 --> 00:05:58.680
+junk memorability issue?
+
+92
+00:05:58.680 --> 00:06:03.280
+Where as Tufte argued that the duck
+junk is distracting and misleading,
+
+93
+00:06:03.280 --> 00:06:07.640
+the study by Bateman et al showed that it
+can make visualizations more memorable.
+
+94
+00:06:07.640 --> 00:06:11.270
+Is this disconnect an issue of
+beauty in information graphics?
+
+95
+00:06:12.790 --> 00:06:15.600
+Here's one parting thought
+on beauty in information
+
+96
+00:06:15.600 --> 00:06:17.400
+that perhaps drives home this quality.
+
+97
+00:06:18.740 --> 00:06:21.967
+One of the most popular tech magazines,
+well known for
+
+98
+00:06:21.967 --> 00:06:25.836
+it's full page information graphic
+spreads is Wired Magazine.
+
+99
+00:06:25.836 --> 00:06:30.200
+On Wired's website,
+they tag these articles as info porn.
+
+100
+00:06:30.200 --> 00:06:33.920
+A reference to the visceral reaction
+that they hope readers will view
+
+101
+00:06:33.920 --> 00:06:35.140
+when viewing the articles.
+
+102
+00:06:37.200 --> 00:06:40.150
+The fourth quality of
+visualization from Cairo
+
+103
+00:06:40.150 --> 00:06:42.870
+is that information graphics
+should be insightful.
+
+104
+00:06:43.870 --> 00:06:46.280
+They shouldn't just replicate
+data in tables, but
+
+105
+00:06:46.280 --> 00:06:50.990
+they should draw the viewer in such that
+the viewer has an aha or eureka moment.
+
+106
+00:06:52.040 --> 00:06:54.710
+I think about this largely
+in the context of academic
+
+107
+00:06:54.710 --> 00:06:57.130
+papers where I do most of my work.
+
+108
+00:06:57.130 --> 00:07:01.379
+A common issue that novice writers have in
+this area is the inclusion of a figure for
+
+109
+00:07:01.379 --> 00:07:02.989
+every piece of data they have.
+
+110
+00:07:02.989 --> 00:07:07.360
+This is really unnecessary and adds
+bloat and contributes to reader fatigue.
+
+111
+00:07:07.360 --> 00:07:11.200
+But the right figure drives home
+the results of a study quickly.
+
+112
+00:07:11.200 --> 00:07:13.730
+Scientific peer review is
+common in my field, but
+
+113
+00:07:13.730 --> 00:07:18.090
+readers don't have the large amounts of
+time that they need to do full reviews.
+
+114
+00:07:18.090 --> 00:07:20.020
+When flipping through a submitted paper,
+
+115
+00:07:20.020 --> 00:07:24.990
+the reviewer sees an image which jumps off
+the page and gives them immediate insight.
+
+116
+00:07:24.990 --> 00:07:27.730
+This sets them up to understand
+the more nuanced story
+
+117
+00:07:27.730 --> 00:07:29.430
+to be told throughout
+the rest of the paper.
+
+118
+00:07:30.720 --> 00:07:33.650
+The final quality of
+visualization which Cairo
+
+119
+00:07:33.650 --> 00:07:36.520
+proposes is information graphics
+should be enlightening.
+
+120
+00:07:37.770 --> 00:07:39.678
+This is different than insightful.
+
+121
+00:07:39.678 --> 00:07:44.262
+In fact, Cairo argues that this quality
+is composed of the previous four,
+
+122
+00:07:44.262 --> 00:07:47.633
+truthful, functional,
+beautiful and insightful.
+
+123
+00:07:47.633 --> 00:07:51.189
+But he separates and then adds
+a social responsibility dimension.
+
+124
+00:07:52.640 --> 00:07:55.890
+I don't think there's an obvious
+answer to this question.
+
+125
+00:07:55.890 --> 00:07:57.070
+But without a doubt,
+
+126
+00:07:57.070 --> 00:08:02.160
+Cairo's Five Qualities of Great
+Visualizations being truthful, functional,
+
+127
+00:08:02.160 --> 00:08:06.780
+beautiful, insightful, and
+enlightening are well worth considering.
+
+128
+00:08:06.780 --> 00:08:08.873
+Cairo has more great work, and
+
+129
+00:08:08.873 --> 00:08:13.220
+following this lecture I have
+assigned a reading of his as well as
+
+130
+00:08:13.220 --> 00:08:17.971
+a discussion question to encourage
+you to weigh in on the immorality of
+
+131
+00:08:17.971 --> 00:08:22.017
+information visualization as
+it relates to data science.
+
+132
+00:08:22.017 --> 00:08:24.420
+And this ends the week of the course.
+
+133
+00:08:24.420 --> 00:08:27.019
+We've covered a lot of
+material very quickly.
+
+134
+00:08:27.019 --> 00:08:30.491
+But I really do believe that these
+two authors Alberto Ciro and
+
+135
+00:08:30.491 --> 00:08:34.164
+Edward Tufty are fundamental in
+building a strong foundation for
+
+136
+00:08:34.164 --> 00:08:38.860
+the applied data science skills, we'll
+focus on in the second week of the course.

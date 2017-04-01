@@ -1,0 +1,375 @@
+WEBVTT
+
+1
+00:00:08.834 --> 00:00:13.053
+Edward Tufte is a seminal figure on how
+to design visual displays of quantitative
+
+2
+00:00:13.053 --> 00:00:13.869
+information.
+
+3
+00:00:13.869 --> 00:00:17.327
+In fact, this is the title of
+my favorite book of his, and
+
+4
+00:00:17.327 --> 00:00:21.030
+I highly encourage you
+to check out his work.
+
+5
+00:00:21.030 --> 00:00:24.920
+In this book, he introduces two
+interesting graphical heuristics,
+
+6
+00:00:24.920 --> 00:00:26.910
+the data-ink ratio and chart junk.
+
+7
+00:00:28.230 --> 00:00:30.090
+First, what's a heuristic?
+
+8
+00:00:30.090 --> 00:00:34.390
+A heuristic is a process or rule that is
+meant to guide you in decision making.
+
+9
+00:00:34.390 --> 00:00:40.120
+Is by definition not known to be optimal
+or perfect, but to be practical in nature.
+
+10
+00:00:40.120 --> 00:00:44.050
+Heuristics are meant to be followed until
+you've a reason to deviate from them.
+
+11
+00:00:44.050 --> 00:00:46.933
+Tufte's first graphical
+heuristic is data-ink ratio.
+
+12
+00:00:46.933 --> 00:00:52.350
+Tufte defines data-ink as
+the non-erasable core of a graphic.
+
+13
+00:00:52.350 --> 00:00:58.550
+The non-redundant ink arranged in response
+to variation in the numbers represented.
+
+14
+00:00:58.550 --> 00:01:03.210
+In other words, the data-ink is essential
+to the sense-making process for
+
+15
+00:01:03.210 --> 00:01:04.130
+a given variable.
+
+16
+00:01:05.680 --> 00:01:09.330
+Tufte defines the data-ink
+ratio as the amount of data-ink
+
+17
+00:01:09.330 --> 00:01:13.060
+divided by the total ink
+required to print the graphic.
+
+18
+00:01:13.060 --> 00:01:16.610
+Now I don't think that he's actually
+suggesting we measure the amount of ink
+
+19
+00:01:16.610 --> 00:01:20.530
+laid down on the page, but
+instead is suggesting that we remove those
+
+20
+00:01:20.530 --> 00:01:23.500
+elements which don't add new
+information to the graphic.
+
+21
+00:01:24.780 --> 00:01:28.764
+Perhaps one of the best known examples
+showing data-ink reduction was done by
+
+22
+00:01:28.764 --> 00:01:31.964
+Darkhorse Analytics,
+an information, visualization, and
+
+23
+00:01:31.964 --> 00:01:35.440
+design company in Edmonton,
+Alberta, Canada.
+
+24
+00:01:35.440 --> 00:01:39.890
+They've put together four examples of
+how the data-ink ratio can be approved.
+
+25
+00:01:39.890 --> 00:01:43.230
+And I'm going to link to those
+in the next reading assignment.
+
+26
+00:01:43.230 --> 00:01:45.390
+But I'm going to walk through
+the first one of those here.
+
+27
+00:01:47.180 --> 00:01:50.040
+We start with the table of
+the data about food items and
+
+28
+00:01:50.040 --> 00:01:52.550
+the number of calories in those items.
+
+29
+00:01:52.550 --> 00:01:55.660
+The first step is to remove
+unwanted background imagery
+
+30
+00:01:55.660 --> 00:01:58.990
+since it provides no value
+to understanding the chart.
+
+31
+00:01:58.990 --> 00:02:02.558
+We also remove the gray background
+behind the bars since it provides no
+
+32
+00:02:02.558 --> 00:02:03.588
+conceptual value.
+
+33
+00:02:03.588 --> 00:02:07.210
+Then we get rid of
+the redundancy throughout.
+
+34
+00:02:07.210 --> 00:02:08.820
+This includes getting rid of the legend,
+
+35
+00:02:08.820 --> 00:02:11.965
+since each bar is labeled
+directly along the x-axis.
+
+36
+00:02:13.060 --> 00:02:16.860
+The title in the y-axis labels are
+trimmed, since there's plenty of reference
+
+37
+00:02:16.860 --> 00:02:19.770
+throughout the image to this being
+about calories for food items.
+
+38
+00:02:21.530 --> 00:02:24.290
+This leaves us with a much smaller image.
+
+39
+00:02:24.290 --> 00:02:28.130
+There are some heavy lines forming
+borders which add no value, so
+
+40
+00:02:28.130 --> 00:02:29.280
+we can remove them too.
+
+41
+00:02:30.830 --> 00:02:33.581
+Color is a tricky item to
+include in charts and graphs.
+
+42
+00:02:33.581 --> 00:02:37.950
+We won't be going into depth on
+color theory in this course.
+
+43
+00:02:37.950 --> 00:02:41.130
+But color is a challenge when trying
+to engage with persons who might
+
+44
+00:02:41.130 --> 00:02:43.260
+be color vision deficient or color blind.
+
+45
+00:02:44.860 --> 00:02:47.090
+There are some tactics to work around.
+
+46
+00:02:47.090 --> 00:02:51.660
+For instance, it used to be best practice
+to replace coloration with patterns,
+
+47
+00:02:51.660 --> 00:02:53.560
+sometimes called hatching in graphics.
+
+48
+00:02:54.570 --> 00:02:57.080
+This brings its own challenges,
+which we'll see in a bit.
+
+49
+00:02:58.450 --> 00:03:01.920
+Instead, the solution is almost always
+to remove all color, except for
+
+50
+00:03:01.920 --> 00:03:05.740
+one which you can use as emphasis and
+link to that color in your text.
+
+51
+00:03:06.960 --> 00:03:10.290
+Someone then viewing a chart out of
+context would still get the sense
+
+52
+00:03:10.290 --> 00:03:13.510
+of emphasis without being
+overwhelmed by a rainbow of data.
+
+53
+00:03:14.590 --> 00:03:16.300
+So let's drop colors except for bacon,
+
+54
+00:03:16.300 --> 00:03:19.971
+with the presumption that this text
+is clearly referenced in the data.
+
+55
+00:03:21.905 --> 00:03:23.170
+Three-dimensional bars and
+
+56
+00:03:23.170 --> 00:03:26.680
+drop shadows can go as well,
+since these don't add extra value.
+
+57
+00:03:26.680 --> 00:03:28.569
+We could also drop the bolding throughout.
+
+58
+00:03:30.080 --> 00:03:32.675
+There's still a lot of gridwork
+left in this image and
+
+59
+00:03:32.675 --> 00:03:36.552
+it's a bit unclear what the value of this
+gridwork is, so we're going to drop it.
+
+60
+00:03:36.552 --> 00:03:41.760
+Now grids can be valuable, but
+they're often just a distraction.
+
+61
+00:03:41.760 --> 00:03:43.760
+For the moment though, study the image.
+
+62
+00:03:43.760 --> 00:03:47.117
+What's the difference in the number
+of calories between bacon,
+
+63
+00:03:47.117 --> 00:03:50.546
+our data point of interest, and
+say, potato chips or chili dogs?
+
+64
+00:03:52.775 --> 00:03:55.469
+Just removing the lines doesn't
+make it easier to read.
+
+65
+00:03:55.469 --> 00:03:59.160
+But the values of the data
+are pretty simple here.
+
+66
+00:03:59.160 --> 00:04:02.110
+So let's directly label
+each bar in the graphic.
+
+67
+00:04:03.800 --> 00:04:06.070
+Now, how big is the difference
+between bacon and
+
+68
+00:04:06.070 --> 00:04:08.190
+potato chips or bacon and chili dogs?
+
+69
+00:04:09.402 --> 00:04:13.039
+Certainly, you have to do a bit of math,
+but you can still get a quick estimate by
+
+70
+00:04:13.039 --> 00:04:16.865
+glancing at the graphic, and an exact
+value through comparing numbers directly.
+
+71
+00:04:16.865 --> 00:04:19.660
+And there you have it.
+
+72
+00:04:19.660 --> 00:04:23.660
+By increasing the data-ink ratio, we have
+made the graphic not only simpler and
+
+73
+00:04:23.660 --> 00:04:27.290
+more readable, but increased the amount
+of information the viewer sees.
+
+74
+00:04:29.250 --> 00:04:32.490
+I encourage you to check out the other
+examples from Darkhorse Analytics
+
+75
+00:04:32.490 --> 00:04:34.170
+linked in the next reading.
+
+76
+00:04:34.170 --> 00:04:35.390
+As they've done this clean up for
+
+77
+00:04:35.390 --> 00:04:38.640
+a variety of different
+visuals including maps.
+
+78
+00:04:38.640 --> 00:04:42.650
+We'll continue our exploration of Tufte's
+heuristics by looking at chart junk
+
+79
+00:04:42.650 --> 00:04:43.500
+in the next lecture.

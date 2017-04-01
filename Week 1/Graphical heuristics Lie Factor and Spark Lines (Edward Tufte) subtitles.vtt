@@ -1,0 +1,282 @@
+WEBVTT
+
+1
+00:00:09.740 --> 00:00:14.355
+Edward Tufte's emphasis on simplicity and
+minimalism has grown a great following.
+
+2
+00:00:14.355 --> 00:00:18.340
+He's largely seen as one of the most
+influential writers on the topic of
+
+3
+00:00:18.340 --> 00:00:20.250
+visualizations for charts and graphs.
+
+4
+00:00:21.400 --> 00:00:23.330
+In his book, Beautiful Evidence,
+
+5
+00:00:23.330 --> 00:00:27.530
+he introduced the idea that took
+minimalism in charts to a new level.
+
+6
+00:00:27.530 --> 00:00:31.570
+Instead of making a chart a separate
+artifact to be studied on it's own,
+
+7
+00:00:31.570 --> 00:00:36.330
+he suggested it be reduced and
+embedded within the context of discussion.
+
+8
+00:00:36.330 --> 00:00:41.130
+He argued that a small graph, say a time
+series line graph, could convey so
+
+9
+00:00:41.130 --> 00:00:45.600
+much more information quickly that
+it would be invaluable to readers.
+
+10
+00:00:45.600 --> 00:00:50.020
+He called these items sparklines and
+referred to them as data words.
+
+11
+00:00:50.020 --> 00:00:53.520
+An intriguing way to bridge
+the gap between text and figures.
+
+12
+00:00:54.810 --> 00:00:59.180
+He suggested that sparklines could not
+only be represented directly in text, but
+
+13
+00:00:59.180 --> 00:01:03.320
+also could be embedded in tables
+along with the data they describe.
+
+14
+00:01:03.320 --> 00:01:07.090
+This thought became so natural that it's
+even been pick up by one of the most
+
+15
+00:01:07.090 --> 00:01:11.800
+common pieces of spreadsheet
+analysis software, Microsoft Excel.
+
+16
+00:01:11.800 --> 00:01:15.819
+Here is a picture of tabular data
+from the NASDAQ stock exchange,
+
+17
+00:01:15.819 --> 00:01:20.655
+showing the opening price of four
+technology stocks over one-month period.
+
+18
+00:01:20.655 --> 00:01:22.799
+Take a moment to consider this data.
+
+19
+00:01:22.799 --> 00:01:26.233
+Which stock has had a bad
+month with a downward trend?
+
+20
+00:01:26.233 --> 00:01:28.430
+And which has had a good
+month with an upward trend?
+
+21
+00:01:29.470 --> 00:01:32.750
+What if I added sparklines
+in the cells below?
+
+22
+00:01:32.750 --> 00:01:35.760
+Here you can see immediately that
+Apple has had a poor month with
+
+23
+00:01:35.760 --> 00:01:37.250
+decreased stock price.
+
+24
+00:01:37.250 --> 00:01:41.190
+And IBM has had good month
+with increasing stock prices.
+
+25
+00:01:41.190 --> 00:01:44.945
+With Amazon and Intel it's a little less
+clear, and we see some spikes throughout.
+
+26
+00:01:47.193 --> 00:01:51.333
+Now these sparklines don't help us to
+answer who has the highest stock price, or
+
+27
+00:01:51.333 --> 00:01:53.233
+who had the greatest wins or losses.
+
+28
+00:01:53.233 --> 00:01:58.190
+But they do give us a general feeling for
+the trend behind the data.
+
+29
+00:01:58.190 --> 00:02:01.060
+And actually, sparklines are used for
+data where trends or
+
+30
+00:02:01.060 --> 00:02:03.470
+distribution characteristics
+are important.
+
+31
+00:02:04.530 --> 00:02:08.905
+Here's another example of sparklines
+used in Google Finance's website.
+
+32
+00:02:08.905 --> 00:02:12.305
+Notice how you can actually quickly zoom
+in on pieces of the distribution with
+
+33
+00:02:12.305 --> 00:02:13.204
+these sparklines.
+
+34
+00:02:13.204 --> 00:02:15.800
+So they're not just
+a representation of the data but
+
+35
+00:02:15.800 --> 00:02:17.570
+a method of interacting with them.
+
+36
+00:02:19.200 --> 00:02:21.950
+There have been lots of
+different uses of sparklines.
+
+37
+00:02:21.950 --> 00:02:26.420
+And customized interfaces,
+such as video games, are a great example.
+
+38
+00:02:26.420 --> 00:02:29.940
+A modern take on sparklines,
+which I think of as kind of neat,
+
+39
+00:02:29.940 --> 00:02:31.770
+is called the sparktweet.
+
+40
+00:02:31.770 --> 00:02:36.350
+Where Unicode block characters are used
+to display a bar graph inside the 140
+
+41
+00:02:36.350 --> 00:02:38.343
+characters allotted by Twitter.
+
+42
+00:02:38.343 --> 00:02:39.318
+For instance,
+
+43
+00:02:39.318 --> 00:02:44.273
+here a user has tweeted her hours of sleep
+over the month of April as a bar graph.
+
+44
+00:02:47.452 --> 00:02:51.020
+The last Tufte principle that I want to
+share with you is one called lie factor.
+
+45
+00:02:52.110 --> 00:02:55.630
+Lie factor is the size of
+an effect shown in the graphic
+
+46
+00:02:55.630 --> 00:02:59.360
+divided by the size of
+the effect actually in the data.
+
+47
+00:02:59.360 --> 00:03:01.540
+It's often done unconsciously, to try and
+
+48
+00:03:01.540 --> 00:03:05.700
+help tell a narrative, however,
+it's misleading to the observers.
+
+49
+00:03:05.700 --> 00:03:08.510
+There are lots of different
+examples of lie factor.
+
+50
+00:03:08.510 --> 00:03:12.410
+This one from Time Magazine in 1979
+provides a great example, I think.
+
+51
+00:03:14.070 --> 00:03:18.695
+In it, various barrels of oil are shown,
+showing the price of oil over six years.
+
+52
+00:03:18.695 --> 00:03:22.521
+But it's unclear to the viewer what
+the size of one barrel means in relation
+
+53
+00:03:22.521 --> 00:03:26.300
+to the others, in part because there's
+an element of perspective here.
+
+54
+00:03:26.300 --> 00:03:29.613
+Are the barrels different sizes,
+or do they just appear to be so
+
+55
+00:03:29.613 --> 00:03:31.750
+because some are in front of the others?
+
+56
+00:03:32.800 --> 00:03:36.690
+Is it the volume of the barrel that
+represents the growth of the cost, or
+
+57
+00:03:36.690 --> 00:03:37.530
+the height of the barrel?
+
+58
+00:03:39.600 --> 00:03:44.006
+Sparklines and lie factor are just two
+more tools that Edward Tufte has given us
+
+59
+00:03:44.006 --> 00:03:46.152
+to understand and communicate data.

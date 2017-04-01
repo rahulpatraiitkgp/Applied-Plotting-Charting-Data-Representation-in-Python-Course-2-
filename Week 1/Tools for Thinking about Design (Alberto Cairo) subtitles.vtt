@@ -1,0 +1,667 @@
+WEBVTT
+
+1
+00:00:09.235 --> 00:00:12.673
+In his book, the Functional Art,
+Alberto Cairo provides a tool for
+
+2
+00:00:12.673 --> 00:00:16.537
+thinking about design tradeoffs when
+building information graphics, and
+
+3
+00:00:16.537 --> 00:00:18.849
+he calls this tool
+the Visualization Wheel.
+
+4
+00:00:20.010 --> 00:00:23.110
+In this conceptualization there
+are two poles of a circle.
+
+5
+00:00:23.110 --> 00:00:27.560
+The top one represents highly complex
+data which informs at a deep level.
+
+6
+00:00:27.560 --> 00:00:32.790
+While the bottom provides easier access to
+data but only informs in a shallow manner.
+
+7
+00:00:32.790 --> 00:00:37.960
+Inside the circle are dimensions which
+describe tradeoffs between two approaches.
+
+8
+00:00:37.960 --> 00:00:40.630
+While Cairo provides a number
+of interesting dimensions.
+
+9
+00:00:40.630 --> 00:00:42.767
+It's important to note
+that this is a tool for
+
+10
+00:00:42.767 --> 00:00:45.400
+designers to think about
+their visualizations.
+
+11
+00:00:45.400 --> 00:00:48.070
+And not so much an analytics tool itself.
+
+12
+00:00:48.070 --> 00:00:50.870
+Your needs from any particular
+problem might change which of
+
+13
+00:00:50.870 --> 00:00:52.790
+these dimensions are important or
+
+14
+00:00:52.790 --> 00:00:56.575
+might introduce new dimensions
+which you should be thinking about.
+
+15
+00:00:56.575 --> 00:01:00.760
+Cairo actually suggests a role in an
+organization or a professional background
+
+16
+00:01:00.760 --> 00:01:04.410
+might also influence the kinds
+of graphics we want to make.
+
+17
+00:01:04.410 --> 00:01:07.799
+So I'd like to ask you as someone
+who's studying data science,
+
+18
+00:01:07.799 --> 00:01:10.893
+who are you trying to reach
+through your visualizations?
+
+19
+00:01:14.139 --> 00:01:18.800
+Let's dig in and look at a few of
+the trade offs that Cairo considers.
+
+20
+00:01:18.800 --> 00:01:21.710
+The first is abstraction and figuration.
+
+21
+00:01:21.710 --> 00:01:25.320
+A highly figurative visual describes
+the phenomenon using physical
+
+22
+00:01:25.320 --> 00:01:29.830
+representations of the phenomena,
+such as photographs or drawings.
+
+23
+00:01:29.830 --> 00:01:32.230
+As the representations
+become less real and
+
+24
+00:01:32.230 --> 00:01:36.570
+more conceptual, the emphasis shifts
+from figuration to abstraction.
+
+25
+00:01:37.830 --> 00:01:42.660
+The second dimension he discusses is,
+is functionality and decoration.
+
+26
+00:01:42.660 --> 00:01:45.710
+A completely functional graphic
+has no embellishments and
+
+27
+00:01:45.710 --> 00:01:48.980
+is closer to a direct
+representation of the data.
+
+28
+00:01:48.980 --> 00:01:52.600
+While a heavily decorated graphic
+has more artistic embellishments.
+
+29
+00:01:53.670 --> 00:01:57.550
+As it is with all of these dimensions,
+there isn't a clear better or worse.
+
+30
+00:01:57.550 --> 00:02:00.150
+Embellishments may increase
+the amount of time a viewer
+
+31
+00:02:00.150 --> 00:02:02.240
+spends considering the visual.
+
+32
+00:02:02.240 --> 00:02:03.900
+Exploring it's nuances and
+
+33
+00:02:03.900 --> 00:02:08.680
+forming mental associations which may
+increase familiarity and memorability.
+
+34
+00:02:10.010 --> 00:02:11.990
+The third dimension is density and
+
+35
+00:02:11.990 --> 00:02:16.050
+lightness as they relate to the amount
+of information being shown.
+
+36
+00:02:16.050 --> 00:02:19.910
+There are lots of great examples
+of this in scientific visuals,
+
+37
+00:02:19.910 --> 00:02:22.910
+where some figures are intended
+to be studied in depth,
+
+38
+00:02:22.910 --> 00:02:26.580
+while others are meant to
+quickly augment a narrative.
+
+39
+00:02:26.580 --> 00:02:30.930
+You can see this dimension at play
+when comparing magazine infographics,
+
+40
+00:02:30.930 --> 00:02:34.960
+where the reader is likely to be
+more heavily engaged in the content.
+
+41
+00:02:34.960 --> 00:02:38.610
+Two advertisements in the same magazine
+where readers are likely to only
+
+42
+00:02:38.610 --> 00:02:39.680
+quickly consider an ad.
+
+43
+00:02:40.890 --> 00:02:44.120
+Here's an example from my field of study
+which was published by Harvard and
+
+44
+00:02:44.120 --> 00:02:47.230
+MIT describing the patterns
+of access of users
+
+45
+00:02:47.230 --> 00:02:50.060
+in the edX massive open
+online course platform.
+
+46
+00:02:52.120 --> 00:02:54.320
+Take a moment to study this image.
+
+47
+00:02:54.320 --> 00:02:56.590
+What sense can you make of this image?
+
+48
+00:03:04.246 --> 00:03:06.977
+If we consider Cairo's third dimension.
+
+49
+00:03:06.977 --> 00:03:11.780
+It'd be tough not to say that
+this is a fairly dense graphic.
+
+50
+00:03:11.780 --> 00:03:14.460
+The main portion of the graphic,
+a scatterplot,
+
+51
+00:03:14.460 --> 00:03:19.000
+has two axes which are labeled, as do
+each of the two subplots to the left and
+
+52
+00:03:19.000 --> 00:03:20.200
+the bottom, which are histograms.
+
+53
+00:03:21.230 --> 00:03:21.930
+The axis for
+
+54
+00:03:21.930 --> 00:03:26.940
+the histograms can be a bit confusing as
+they bleed into the scatterplot axis, but
+
+55
+00:03:26.940 --> 00:03:31.218
+change the unit of measure and
+the direction of the measurement.
+
+56
+00:03:31.218 --> 00:03:34.601
+For instance, in the X axis at
+the top of the scatter plot,
+
+57
+00:03:34.601 --> 00:03:38.607
+percentage of chapters access is
+being used as the unit of measure and
+
+58
+00:03:38.607 --> 00:03:42.354
+increases as you move towards
+the right hand side of the figure.
+
+59
+00:03:42.354 --> 00:03:46.425
+You have the same X axis for the histogram
+to the left of the graph is in
+
+60
+00:03:46.425 --> 00:03:52.060
+thousands of persons and increases as
+you move to the left side of the figure.
+
+61
+00:03:52.060 --> 00:03:54.560
+There's some red lines
+overlayed on the graphic.
+
+62
+00:03:54.560 --> 00:03:59.110
+Breaking the scatter plot roughly into
+quadrants, but with minimal labeling it's
+
+63
+00:03:59.110 --> 00:04:02.670
+a little unclear what
+the quadrants end up representing.
+
+64
+00:04:02.670 --> 00:04:04.690
+Regardless of whether
+this is a good figure or
+
+65
+00:04:04.690 --> 00:04:08.270
+not, it would certainly be considered
+an example of a dense figure.
+
+66
+00:04:09.770 --> 00:04:13.730
+The fourth aspect Cairo maps is
+the dimensionality of the graphic.
+
+67
+00:04:14.930 --> 00:04:18.410
+A multidimensional graphic describes
+a phenomena as a whole and
+
+68
+00:04:18.410 --> 00:04:22.880
+invites the viewer to explore many
+different aspects of the phenomena.
+
+69
+00:04:22.880 --> 00:04:27.182
+A unidimensional graphic
+instead focuses on a single or
+
+70
+00:04:27.182 --> 00:04:30.940
+a few items and
+explores them in one or more ways.
+
+71
+00:04:30.940 --> 00:04:34.601
+The fifth dimension is originality and
+familiarity.
+
+72
+00:04:34.601 --> 00:04:38.792
+In the modern world, we're used to
+seeing a plethora of different kinds of
+
+73
+00:04:38.792 --> 00:04:42.463
+information graphics,
+things like bar charts and line charts.
+
+74
+00:04:42.463 --> 00:04:45.796
+And thinking in terms of these
+representations is taught at a very
+
+75
+00:04:45.796 --> 00:04:47.010
+young age.
+
+76
+00:04:47.010 --> 00:04:49.140
+For instance, my daughter,
+who's almost five,
+
+77
+00:04:49.140 --> 00:04:52.720
+came home from preschool the other day
+with a page that showed a bar chart.
+
+78
+00:04:52.720 --> 00:04:54.900
+That she and others had made in class.
+
+79
+00:04:54.900 --> 00:04:58.550
+To celebrate learning about the American
+election, the whole class got together and
+
+80
+00:04:58.550 --> 00:05:00.060
+had a vote on what they would have for
+
+81
+00:05:00.060 --> 00:05:04.690
+snack, chocolate ice cream or
+mint chocolate chip ice cream.
+
+82
+00:05:04.690 --> 00:05:08.410
+Of course, mint chocolate chip ice
+cream won, as one might expect.
+
+83
+00:05:08.410 --> 00:05:12.343
+But, my point here, is that, these
+are basic ways of thinking about data in
+
+84
+00:05:12.343 --> 00:05:15.489
+a graphical form and
+they are now being taught very early on.
+
+85
+00:05:15.489 --> 00:05:18.154
+And this makes them familiar
+to a broad population.
+
+86
+00:05:19.395 --> 00:05:21.085
+This wasn't always so though.
+
+87
+00:05:21.085 --> 00:05:25.515
+It's safe to say that the bar chart
+is fairly familiar to most people but
+
+88
+00:05:25.515 --> 00:05:27.555
+a graphic with more originalities,
+
+89
+00:05:27.555 --> 00:05:31.585
+elements that need to be explained or
+studied by the user.
+
+90
+00:05:31.585 --> 00:05:35.183
+Here's a very famous
+graphic by Charles Mender.
+
+91
+00:05:35.183 --> 00:05:39.770
+It describes Napoleon's
+march into Russia in 1812.
+
+92
+00:05:39.770 --> 00:05:42.130
+Take a moment to study the graphic.
+
+93
+00:05:42.130 --> 00:05:46.010
+Broadly speaking, there are five different
+kinds of information being visualize in
+
+94
+00:05:46.010 --> 00:05:47.100
+this graphic.
+
+95
+00:05:47.100 --> 00:05:49.190
+How many of those five pieces do you see?
+
+96
+00:05:53.290 --> 00:05:54.692
+Here's what I see.
+
+97
+00:05:54.692 --> 00:05:57.340
+First there are elements of
+geography showing us the various
+
+98
+00:05:57.340 --> 00:05:59.640
+rivers in towns along the way.
+
+99
+00:05:59.640 --> 00:06:04.241
+The width of the tan upper bar represents
+the size of Napoleon's army, and
+
+100
+00:06:04.241 --> 00:06:09.135
+you can see it shrinks from the beginning
+of the campaign from 422,000 to
+
+101
+00:06:09.135 --> 00:06:12.365
+only 100,000 once the French reach Moscow.
+
+102
+00:06:12.365 --> 00:06:16.421
+The lower black bar shows Napoleon's
+retreat from Russia, and there are various
+
+103
+00:06:16.421 --> 00:06:20.850
+points along it which are mapped to
+dates and temperatures in Celsius.
+
+104
+00:06:20.850 --> 00:06:24.730
+We see the bar thins dramatically
+as the army shrinks in size.
+
+105
+00:06:26.420 --> 00:06:31.405
+So the five kinds of data in Mender's
+visualization include location,
+
+106
+00:06:31.405 --> 00:06:34.848
+direction, temperature,
+army size and dates.
+
+107
+00:06:36.163 --> 00:06:40.911
+The last dimension which Cairo shares is
+the novelty and redundancy dimension.
+
+108
+00:06:40.911 --> 00:06:45.115
+Redundancy is the tendency of a graphic
+to tell the same story in many
+
+109
+00:06:45.115 --> 00:06:46.232
+different ways.
+
+110
+00:06:46.232 --> 00:06:50.870
+For instance, you might use the height of
+bars on a bar chart with an axis as well
+
+111
+00:06:50.870 --> 00:06:53.203
+as color to emphasize the largest bar.
+
+112
+00:06:53.203 --> 00:06:56.407
+This one's a bit tricky,
+you don't want to bore your readers or
+
+113
+00:06:56.407 --> 00:06:58.289
+make your graphics overly complex.
+
+114
+00:06:58.289 --> 00:07:02.478
+But you do want to encode information in a
+way which supports their understanding of
+
+115
+00:07:02.478 --> 00:07:04.960
+the phenomena you've described.
+
+116
+00:07:04.960 --> 00:07:06.007
+On this dimension,
+
+117
+00:07:06.007 --> 00:07:10.084
+novelty is the act of describing each
+phenomena in the graphic in only one way.
+
+118
+00:07:11.818 --> 00:07:14.780
+There are no rights and
+wrongs in the visualization wheel.
+
+119
+00:07:14.780 --> 00:07:17.170
+The purpose of the wheel is
+to help you understand and
+
+120
+00:07:17.170 --> 00:07:20.610
+compare the visual
+approaches you might take.
+
+121
+00:07:20.610 --> 00:07:25.580
+As a reflective activity, Cairo suggested
+you can plot your thinking, a long each of
+
+122
+00:07:25.580 --> 00:07:29.720
+these dimensions and then join those
+points together, to create a radar plot.
+
+123
+00:07:30.900 --> 00:07:34.980
+Here Cairo provides two examples of
+the visualization wheel in action.
+
+124
+00:07:34.980 --> 00:07:39.330
+On the left hand side you see there is
+more emphasis towards complex visuals.
+
+125
+00:07:39.330 --> 00:07:43.750
+Those which are dense, multidimensional
+and have high functionality.
+
+126
+00:07:43.750 --> 00:07:45.730
+On the right,
+you see the visualization wheel.
+
+127
+00:07:45.730 --> 00:07:50.900
+There are more elements of decoration,
+lightness, and figuration.
+
+128
+00:07:50.900 --> 00:07:54.000
+Cairo suggests that the left
+wheel is more indicative of work
+
+129
+00:07:54.000 --> 00:07:57.860
+being done by scientists and engineers,
+while the right wheel is more
+
+130
+00:07:57.860 --> 00:08:02.170
+indicative of work being done by artists,
+graphic designers, and journalists.
+
+131
+00:08:03.580 --> 00:08:07.350
+This tension between how scientists and
+engineers might view the visualization of
+
+132
+00:08:07.350 --> 00:08:11.330
+data, and how artists and
+journalists might, is an interesting one.
+
+133
+00:08:11.330 --> 00:08:14.210
+And we'll revisit it at
+the end of next week.
+
+134
+00:08:14.210 --> 00:08:17.550
+In the next lecture, we'll go a bit
+deeper, and consider some heuristics from
+
+135
+00:08:17.550 --> 00:08:20.249
+Edward Tufte,
+as to what makes a good visualization.
+
+136
+00:08:21.380 --> 00:08:25.820
+The visualization wheel is one tool which
+we have in order to better compare two
+
+137
+00:08:25.820 --> 00:08:28.920
+different ways of visualizing information.
+
+138
+00:08:28.920 --> 00:08:30.810
+In the next lecture,
+we'll dig in a bit and
+
+139
+00:08:30.810 --> 00:08:34.690
+see how you might use the visualization
+wheel to evaluate your own graphics.

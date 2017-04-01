@@ -1,0 +1,403 @@
+WEBVTT
+
+1
+00:00:08.986 --> 00:00:13.470
+Another heuristic which Edward Tufte
+introduces us to is called chartjunk.
+
+2
+00:00:13.470 --> 00:00:16.980
+Now Tufte is much more damning of
+chartjunk than he is of other forms
+
+3
+00:00:16.980 --> 00:00:18.530
+of non-data ink.
+
+4
+00:00:18.530 --> 00:00:22.920
+Indeed, he suggests that artistic
+decorations on statistical graphs are like
+
+5
+00:00:22.920 --> 00:00:23.970
+weeds in our data graphics.
+
+6
+00:00:25.200 --> 00:00:28.120
+He suggested there's really
+three kinds of chartjunk.
+
+7
+00:00:28.120 --> 00:00:30.500
+The first is unintended optical art.
+
+8
+00:00:30.500 --> 00:00:33.770
+For instance, excessive shading or
+patterning of chart features,
+
+9
+00:00:33.770 --> 00:00:37.650
+such as shown in this economics graphic
+which Tufte shares in his book,
+
+10
+00:00:37.650 --> 00:00:40.790
+The Visual Display of
+Quantitative Information.
+
+11
+00:00:40.790 --> 00:00:44.745
+Here, the patterns make the human
+eye jump and cause visual fatigue.
+
+12
+00:00:44.745 --> 00:00:47.270
+These phenomenon
+are called moiré patterns.
+
+13
+00:00:47.270 --> 00:00:51.435
+And this is the same reason you don't
+usually see people wearing stripe shirts
+
+14
+00:00:51.435 --> 00:00:53.769
+when filming video content like this MOOC,
+
+15
+00:00:53.769 --> 00:00:57.383
+since the low resolution of the video
+accentuates the moiré issue.
+
+16
+00:00:58.625 --> 00:01:01.790
+Tufte suggests that instead
+of patterning this content,
+
+17
+00:01:01.790 --> 00:01:05.410
+one is better off labeling
+the chart graphics directly.
+
+18
+00:01:05.410 --> 00:01:09.338
+We saw that being used in the data ink
+ratio example by Darkhorse Analytics.
+
+19
+00:01:10.710 --> 00:01:13.912
+The second form of chartjunk is the grid.
+
+20
+00:01:13.912 --> 00:01:17.100
+Tufte suggested the grid is both
+unnecessary as data ink, but
+
+21
+00:01:17.100 --> 00:01:20.000
+also causes competition with
+the actual data being shared.
+
+22
+00:01:21.020 --> 00:01:26.140
+Thinning, removing, or desaturating grid
+lines makes it easier to see the data,
+
+23
+00:01:26.140 --> 00:01:28.920
+instead of being overwhelmed by
+the number of lines on the page.
+
+24
+00:01:30.080 --> 00:01:34.255
+Direct labeling of data is another great
+way to reduce this form of chartjunk.
+
+25
+00:01:35.870 --> 00:01:39.690
+But it's the third form of chartjunk
+that I want to focus on here.
+
+26
+00:01:39.690 --> 00:01:43.855
+It's the one which typically comes to
+mind when talking about chartjunk.
+
+27
+00:01:43.855 --> 00:01:46.410
+Tufte calls this the duck.
+
+28
+00:01:46.410 --> 00:01:50.009
+Broadly, he's referring to
+non-data creative graphics,
+
+29
+00:01:50.009 --> 00:01:54.520
+whether they be line art or photographs
+and they're inclusion in the chart.
+
+30
+00:01:55.630 --> 00:02:00.498
+Newspapers and news magazines are a place
+where this kind of imagery is often used.
+
+31
+00:02:00.498 --> 00:02:05.210
+One well-known graphic artist,
+Nigel Holmes, has used the duck to
+
+32
+00:02:05.210 --> 00:02:10.300
+display data in a way which is memorable
+yet aesthetically interesting.
+
+33
+00:02:10.300 --> 00:02:14.284
+One of the most memorable images
+he's created, to me, is entitled,
+
+34
+00:02:14.284 --> 00:02:16.454
+Diamonds Were a Girl's Best Friend.
+
+35
+00:02:16.454 --> 00:02:19.760
+And this showed up in
+a Times Magazine in 1982.
+
+36
+00:02:19.760 --> 00:02:23.935
+This graphic shows the trend of the price
+of diamonds from 1978 to 1982, and
+
+37
+00:02:23.935 --> 00:02:29.855
+while the dollar amounts
+are easily forgotten, it's easy
+
+38
+00:02:29.855 --> 00:02:33.845
+to remember that the trend have a spike
+because of the shape of the woman's leg.
+
+39
+00:02:35.335 --> 00:02:38.095
+So is the doc really a useful heuristic,
+or
+
+40
+00:02:38.095 --> 00:02:41.150
+is it something about
+docs which are memorable?
+
+41
+00:02:41.150 --> 00:02:43.780
+I was part of a team led by Scott Bateman
+
+42
+00:02:43.780 --> 00:02:46.220
+who wanted to understand
+this issue in more detail.
+
+43
+00:02:46.220 --> 00:02:48.720
+So we set up some user testing.
+
+44
+00:02:48.720 --> 00:02:51.610
+I've linked the full academic
+paper in this week's readings.
+
+45
+00:02:51.610 --> 00:02:54.950
+In short, we provided participants
+a variety of homes as image,
+
+46
+00:02:54.950 --> 00:02:59.810
+including the one which you were shown,
+which could be considered chartjunk.
+
+47
+00:02:59.810 --> 00:03:03.910
+We also included a variety of plain
+graphs with high data-ink ratios,
+
+48
+00:03:03.910 --> 00:03:06.610
+with no decorative embellishments.
+
+49
+00:03:06.610 --> 00:03:09.160
+We brought 24 subjects
+into the laboratory and
+
+50
+00:03:09.160 --> 00:03:14.120
+assigned them to either view the Holmes or
+high data-ink ratio conditions.
+
+51
+00:03:14.120 --> 00:03:15.980
+We asked the subjects to describe and
+
+52
+00:03:15.980 --> 00:03:19.980
+summarize the charts with
+a series of guided questions.
+
+53
+00:03:19.980 --> 00:03:21.800
+This was followed with a recall test,
+
+54
+00:03:21.800 --> 00:03:26.920
+both conducted immediately, as well as
+a second test two to three weeks later.
+
+55
+00:03:26.920 --> 00:03:30.510
+Finally, we used eye tracking to determine
+where subjects were paying attention
+
+56
+00:03:30.510 --> 00:03:32.650
+when they looked at these charts.
+
+57
+00:03:32.650 --> 00:03:34.630
+Our findings were interesting.
+
+58
+00:03:34.630 --> 00:03:37.730
+While there was no recall
+difference when tested immediately,
+
+59
+00:03:37.730 --> 00:03:40.900
+recall after two to three weeks
+was significantly better for
+
+60
+00:03:40.900 --> 00:03:44.620
+the Holmes Charts,
+which showed the duck chartjunk.
+
+61
+00:03:44.620 --> 00:03:48.824
+Further subjects indicated subjectively
+that the Holmes Charts were more
+
+62
+00:03:48.824 --> 00:03:52.025
+enjoyable, more attractive,
+easier to remember, and
+
+63
+00:03:52.025 --> 00:03:53.838
+easier to remember details of.
+
+64
+00:03:53.838 --> 00:03:58.580
+And they felt it was faster to describe
+and remember the Holmes Charts.
+
+65
+00:03:58.580 --> 00:04:02.480
+The non-embellished designs didn't perform
+better than any of the Holmes designs did.
+
+66
+00:04:03.940 --> 00:04:07.550
+Does this mean that you should use
+embellishments in your charts?
+
+67
+00:04:07.550 --> 00:04:08.600
+Well, maybe.
+
+68
+00:04:08.600 --> 00:04:11.480
+I don't know of anyone who has
+replicated our findings on a larger and
+
+69
+00:04:11.480 --> 00:04:15.520
+more diverse population, and there are
+certainly other kinds of chartjunk, like
+
+70
+00:04:15.520 --> 00:04:20.080
+the unintended optical art in the grid
+which seem like really good heuristics.
+
+71
+00:04:20.080 --> 00:04:23.610
+But I think there's more to be told in the
+story and more nuance to be worked out.
+
+72
+00:04:24.930 --> 00:04:28.440
+At this point, you should have, at least,
+some thoughts from designers as well as
+
+73
+00:04:28.440 --> 00:04:32.110
+from a user study on
+specific kinds of charts.
+
+74
+00:04:32.110 --> 00:04:35.640
+And as you go about creating your
+data science graphics, it's worth
+
+75
+00:04:35.640 --> 00:04:39.760
+not only reflecting on the principles you
+use and the results you are sharing, but
+
+76
+00:04:39.760 --> 00:04:42.664
+also the process by which you
+came up to create the graphics.
+
+77
+00:04:43.900 --> 00:04:47.973
+Setting up a user's study is much simpler
+today with crowd sourcing services,
+
+78
+00:04:47.973 --> 00:04:51.300
+such as CrowdFlower and
+Amazon Mechanical Turk.
+
+79
+00:04:51.300 --> 00:04:55.180
+It's now very reasonable for the average
+data scientist to test out whether
+
+80
+00:04:55.180 --> 00:04:58.310
+more embellished visuals
+might be more effective.
+
+81
+00:04:58.310 --> 00:04:59.930
+Whether it's in terms of time,
+
+82
+00:04:59.930 --> 00:05:03.835
+memorability, accuracy
+than those with data-ink.
+
+83
+00:05:05.300 --> 00:05:09.270
+In the next lecture, we're going to go on
+to touch on two more items from Tufte,
+
+84
+00:05:09.270 --> 00:05:10.900
+the Lie Factor and sparklines.

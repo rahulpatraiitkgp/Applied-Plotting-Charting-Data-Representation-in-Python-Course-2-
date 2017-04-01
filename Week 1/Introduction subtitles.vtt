@@ -1,0 +1,339 @@
+WEBVTT
+
+1
+00:00:08.650 --> 00:00:12.616
+Welcome to the second course in the
+Introduction to Applied Data Science with
+
+2
+00:00:12.616 --> 00:00:14.840
+Python specialization.
+
+3
+00:00:14.840 --> 00:00:18.060
+In the first course we looked,
+primarily, at how to manipulate data,
+
+4
+00:00:18.060 --> 00:00:20.390
+including loading data from
+structured delimited files,
+
+5
+00:00:20.390 --> 00:00:25.160
+such as CSVs, cleaning the data with
+Python pandas, and NumPy libraries, and
+
+6
+00:00:25.160 --> 00:00:29.770
+transforming data using functions,
+such as apply, aggregate, map, and pivot.
+
+7
+00:00:29.770 --> 00:00:34.180
+If you don't feel you have a solid
+understanding of the pandas toolkit,
+
+8
+00:00:34.180 --> 00:00:37.330
+then I would invite you to go back and
+review that course content.
+
+9
+00:00:39.450 --> 00:00:43.550
+The main topic of this course is
+understanding how to communicate data more
+
+10
+00:00:43.550 --> 00:00:47.990
+clearly to the various stakeholders
+who are interested in the data.
+
+11
+00:00:47.990 --> 00:00:51.150
+And there are many different
+stakeholders to whom you might be
+
+12
+00:00:51.150 --> 00:00:53.050
+interested in using visuals to reach.
+
+13
+00:00:54.050 --> 00:00:57.910
+For instance, you want to share unbiased,
+representations of data with
+
+14
+00:00:57.910 --> 00:01:02.860
+peer data scientists who are able to make
+their own inferences and interpretations.
+
+15
+00:01:02.860 --> 00:01:06.560
+But you'll also want to be able to share
+stories about the data with managers and
+
+16
+00:01:06.560 --> 00:01:09.820
+executives who might be familiar
+with domain but are looking for
+
+17
+00:01:09.820 --> 00:01:11.740
+specific actionable insights.
+
+18
+00:01:13.040 --> 00:01:16.744
+Finally, you'll also want to be able to
+communicate like a journalist to a broad
+
+19
+00:01:16.744 --> 00:01:19.733
+population who knows very little
+about your particular data and
+
+20
+00:01:19.733 --> 00:01:23.496
+needs to understand not only an overview
+of the phenomenon you are describing but
+
+21
+00:01:23.496 --> 00:01:26.061
+also the limitations of
+the approaches you have used.
+
+22
+00:01:27.936 --> 00:01:32.590
+This course is about specific techniques
+which are part of a broad subject of
+
+23
+00:01:32.590 --> 00:01:34.490
+information visualization.
+
+24
+00:01:35.600 --> 00:01:37.800
+Referred to an infovis for short,
+
+25
+00:01:37.800 --> 00:01:42.660
+this is a field that has rapidly developed
+over the past 20 years, as computing power
+
+26
+00:01:42.660 --> 00:01:47.180
+has made it possible to build compelling
+visual and interactive graphics quickly.
+
+27
+00:01:48.210 --> 00:01:51.990
+And while the use of visualizations to
+impart knowledge of data has been around
+
+28
+00:01:51.990 --> 00:01:56.840
+for centuries, the last 20 years have seen
+the development of important theoretical
+
+29
+00:01:56.840 --> 00:02:02.330
+basis for best practices in displaying
+information to various audiences.
+
+30
+00:02:02.330 --> 00:02:04.770
+And in this course,
+we're going to focus on those.
+
+31
+00:02:06.570 --> 00:02:10.020
+In this first week of the course, we're
+going to touch on some of those theories
+
+32
+00:02:10.020 --> 00:02:14.050
+and best practices, and talk about
+fundamental thinkers in the field.
+
+33
+00:02:14.050 --> 00:02:17.537
+In particular,
+Alberto Cairo and Edward Tufte.
+
+34
+00:02:17.537 --> 00:02:19.999
+We'll go through some examples
+of excellent and not so
+
+35
+00:02:19.999 --> 00:02:21.347
+excellent visualizations.
+
+36
+00:02:21.347 --> 00:02:22.999
+And develop a language for
+
+37
+00:02:22.999 --> 00:02:27.660
+speaking about how we might make
+meaningful visualizations ourselves.
+
+38
+00:02:28.790 --> 00:02:33.060
+This portion of the course will be largely
+lecture based with several readings and
+
+39
+00:02:33.060 --> 00:02:35.170
+peer reviewed assignment
+at the end of each week.
+
+40
+00:02:36.670 --> 00:02:39.920
+In the second and third week of
+the course, we'll dive into the de facto
+
+41
+00:02:39.920 --> 00:02:44.440
+Python library for creating charts and
+graphs, matplotlib.
+
+42
+00:02:44.440 --> 00:02:48.670
+Now matplotlib isn't the only way to
+create visual artifacts in Python, but
+
+43
+00:02:48.670 --> 00:02:53.870
+it's the basis for some emerging new
+web tools such as C-Born and Bokeh.
+
+44
+00:02:53.870 --> 00:02:56.470
+And acts as a solid foundation for
+our discussions.
+
+45
+00:02:57.510 --> 00:03:01.750
+The majority of these weeks will be spent
+actually working on assignments with
+
+46
+00:03:01.750 --> 00:03:05.430
+a few lectures to share an overview
+of how the toolkit itself works.
+
+47
+00:03:06.480 --> 00:03:10.530
+And you'll be expected to take messy
+raw data, process it using pandas or
+
+48
+00:03:10.530 --> 00:03:15.320
+other suitable techniques and render it
+into a meaningful, explanatory image.
+
+49
+00:03:16.400 --> 00:03:20.340
+And again, if you're not comfortable yet
+using pandas, I would encourage you to go
+
+50
+00:03:20.340 --> 00:03:25.060
+back to the first course in this
+specialization and review those videos.
+
+51
+00:03:25.060 --> 00:03:28.390
+The assignments for weeks two and
+three will be largely peer graded.
+
+52
+00:03:29.990 --> 00:03:33.190
+Finally, the course will
+culminate with a small project,
+
+53
+00:03:33.190 --> 00:03:35.320
+similar to the first course.
+
+54
+00:03:35.320 --> 00:03:38.550
+In this project, you will be given
+a new visualization technique and
+
+55
+00:03:38.550 --> 00:03:43.540
+you will be asked to extend the matplotlib
+code base to enhance its functionality.
+
+56
+00:03:43.540 --> 00:03:46.910
+This is a critical step in your
+journey as a data scientist.
+
+57
+00:03:46.910 --> 00:03:50.640
+To go beyond using tools off the shelf and
+instead be able to modify
+
+58
+00:03:50.640 --> 00:03:53.780
+them to support new ways of
+understanding data and problems.
+
+59
+00:03:55.630 --> 00:03:57.620
+This course is very similar to the first,
+
+60
+00:03:57.620 --> 00:03:59.790
+except the evaluation
+is largely peer review.
+
+61
+00:03:59.790 --> 00:04:03.650
+The lectures will only guide you so
+much in completing the assignments.
+
+62
+00:04:03.650 --> 00:04:07.500
+You'll need to know how to ask questions
+in the discussion forums of your peers.
+
+63
+00:04:07.500 --> 00:04:11.560
+And seek out new information through
+web searches and Stack Overflow.
+
+64
+00:04:11.560 --> 00:04:14.150
+And again,
+Stack Overflow is tagged specifically for
+
+65
+00:04:14.150 --> 00:04:16.150
+questions about matplotlib.
+
+66
+00:04:16.150 --> 00:04:18.530
+So I'd encourage you to
+use that resource as well.
+
+67
+00:04:19.590 --> 00:04:20.710
+Finally, for this course,
+
+68
+00:04:20.710 --> 00:04:23.740
+I expect that you are familiar with
+all of the content from Course 1.
+
+69
+00:04:23.740 --> 00:04:27.780
+I'm looking forward to this
+next course in specialization.
+
+70
+00:04:27.780 --> 00:04:28.400
+Let's get started.

@@ -1,0 +1,556 @@
+WEBVTT
+
+1
+00:00:08.909 --> 00:00:09.990
+A box plot.
+
+2
+00:00:09.990 --> 00:00:12.980
+Sometimes called a box-and-whisker
+plot is a method of showing
+
+3
+00:00:12.980 --> 00:00:16.690
+aggregate statistics of various
+samples in a concise matter.
+
+4
+00:00:17.690 --> 00:00:22.180
+The box plot simultaneously shows, for
+each sample, the median of each value,
+
+5
+00:00:22.180 --> 00:00:25.910
+the minimum and maximum of the samples,
+and the interquartile range.
+
+6
+00:00:28.100 --> 00:00:31.490
+Let's create three different
+samplings from NumPy.
+
+7
+00:00:31.490 --> 00:00:33.340
+One for the normal distribution.
+
+8
+00:00:33.340 --> 00:00:34.810
+One for random.
+
+9
+00:00:34.810 --> 00:00:36.409
+And one from a gamma distribution.
+
+10
+00:00:54.991 --> 00:00:58.800
+Next, let's put those
+in a pandas DataFrame.
+
+11
+00:00:58.800 --> 00:01:03.040
+After all, much of the data we would
+actually process would come from pandas or
+
+12
+00:01:03.040 --> 00:01:09.677
+another data manipulation toolkit and
+not from NumPy distribution functions.
+
+13
+00:01:11.595 --> 00:01:15.909
+Now we can use the pandas described
+function to see some summary statistics
+
+14
+00:01:15.909 --> 00:01:18.200
+about our data frame.
+
+15
+00:01:18.200 --> 00:01:20.312
+Each row has 10,000 entries.
+
+16
+00:01:20.312 --> 00:01:23.130
+The mean values and
+standard deviation vary heavily.
+
+17
+00:01:24.230 --> 00:01:24.830
+The minimal and
+
+18
+00:01:24.830 --> 00:01:28.310
+maximum values are showing, and
+there's three different percentage values.
+
+19
+00:01:29.830 --> 00:01:33.150
+These percentage values make up what's
+called the interquartile range.
+
+20
+00:01:33.150 --> 00:01:36.050
+There are four different
+quarters of the data.
+
+21
+00:01:36.050 --> 00:01:40.100
+The first is between the minimal value and
+the first 25% of the data.
+
+22
+00:01:40.100 --> 00:01:43.960
+And this value of 25% is
+called the first quartile.
+
+23
+00:01:43.960 --> 00:01:49.045
+The second quarter of data is between
+the 25% mark and the 50% of the data.
+
+24
+00:01:49.045 --> 00:01:51.637
+The third between 50 and 75% of the data.
+
+25
+00:01:51.637 --> 00:01:55.420
+And 75% mark is called the third quartile.
+
+26
+00:01:55.420 --> 00:01:59.650
+And the final piece of data is between
+the 75% and the maximum of the data.
+
+27
+00:02:00.690 --> 00:02:05.690
+Like standard deviation, the interquartile
+range is a measure of variability of data.
+
+28
+00:02:05.690 --> 00:02:08.668
+And it's common to plot
+this using a box plot.
+
+29
+00:02:08.668 --> 00:02:14.520
+In a box plot, the mean, or the median,
+of the data is plotted as a straight line.
+
+30
+00:02:14.520 --> 00:02:18.630
+Two boxes are formed, one above, which
+represents the 50% to 75% data group,
+
+31
+00:02:18.630 --> 00:02:23.590
+and one below, which represents
+the 25% to 50% data group.
+
+32
+00:02:23.590 --> 00:02:27.420
+Thin lines which are capped are then drawn
+out to the minimum and maximum values.
+
+33
+00:02:29.390 --> 00:02:30.900
+Here's an example.
+
+34
+00:02:30.900 --> 00:02:32.710
+We'll create a new figure.
+
+35
+00:02:32.710 --> 00:02:36.550
+Then we call plt.boxplot, and we pass in
+the column that we want to visualize.
+
+36
+00:02:37.702 --> 00:02:41.620
+In matplotlib,
+data needs to conform to NumPy arrays.
+
+37
+00:02:41.620 --> 00:02:44.850
+But pandas is built on top
+of NumPy data points, so
+
+38
+00:02:44.850 --> 00:02:47.680
+this is as easy as projecting
+the column that we're interested in.
+
+39
+00:02:49.120 --> 00:02:52.508
+Finally, we set the whis
+parameter to be the range.
+
+40
+00:02:52.508 --> 00:02:58.072
+This tells the box plot to set the whisker
+values all the way out to the minimum and
+
+41
+00:02:58.072 --> 00:02:59.330
+maximum values.
+
+42
+00:02:59.330 --> 00:03:03.080
+Also, I am going to assign the output
+of the box plot function to a variable,
+
+43
+00:03:03.080 --> 00:03:04.310
+which is just an underscore.
+
+44
+00:03:05.340 --> 00:03:09.260
+Now this is either horrendous or
+beautiful, depending on who you are.
+
+45
+00:03:09.260 --> 00:03:13.150
+You see, underscore is actually
+a legal name for a variable on Python.
+
+46
+00:03:13.150 --> 00:03:15.300
+But it's also completely uninformative.
+
+47
+00:03:16.430 --> 00:03:20.690
+It's common practice by some to use an
+underscore when unpacking values which you
+
+48
+00:03:20.690 --> 00:03:22.810
+don't care about and won't use later.
+
+49
+00:03:24.120 --> 00:03:27.400
+I am using it here because if we don't
+assign the return value of plotting
+
+50
+00:03:27.400 --> 00:03:29.160
+function to a variable,
+
+51
+00:03:29.160 --> 00:03:32.100
+the Jupiter Notebook will assume
+that we wanted to print that output.
+
+52
+00:03:33.420 --> 00:03:36.860
+Since plotting functions return
+a list of all of the artists plotted,
+
+53
+00:03:36.860 --> 00:03:39.260
+this would really muddy up our display.
+
+54
+00:03:39.260 --> 00:03:41.800
+It's up to you whether you want
+to use this underscore pattern or
+
+55
+00:03:41.800 --> 00:03:42.760
+not in your own code.
+
+56
+00:03:44.240 --> 00:03:46.630
+Great, this gives us a basic box plot.
+
+57
+00:03:47.640 --> 00:03:50.170
+Now let's add the other two samples to it.
+
+58
+00:03:50.170 --> 00:03:54.550
+Unfortunately we can't just pass a whole
+pandas data frame to matplotlib.
+
+59
+00:03:54.550 --> 00:03:58.532
+Instead we need to pull out each column
+and send them in as a list of values.
+
+60
+00:03:58.532 --> 00:04:03.890
+All right,
+that gives us our three distributions.
+
+61
+00:04:03.890 --> 00:04:07.360
+Now, we didn't normalize the scale,
+so that's a little wonky.
+
+62
+00:04:07.360 --> 00:04:09.810
+But if we look at the gamma distribution,
+for instance,
+
+63
+00:04:09.810 --> 00:04:12.600
+we see the tail of it is very, very long.
+
+64
+00:04:12.600 --> 00:04:14.370
+So the maximum values are very far out.
+
+65
+00:04:15.540 --> 00:04:18.075
+Let's take a look at this
+by itself in a histogram.
+
+66
+00:04:26.381 --> 00:04:29.707
+Interesting, we see it starts
+at a moderate level, spikes up,
+
+67
+00:04:29.707 --> 00:04:33.475
+then drops off much more gradually and
+does indeed have a very long tail.
+
+68
+00:04:34.680 --> 00:04:36.550
+Let's add this to our box plot.
+
+69
+00:04:36.550 --> 00:04:40.090
+Curiosity and to demonstrate
+something called inset axes.
+
+70
+00:04:41.240 --> 00:04:43.910
+Recall that we have one
+figure with one subplot.
+
+71
+00:04:43.910 --> 00:04:46.140
+Since we didn't do anything
+fancy with subplots,
+
+72
+00:04:46.140 --> 00:04:47.960
+that means we only have one axes object.
+
+73
+00:04:48.970 --> 00:04:53.310
+We can actually overlay an axes on
+top of another within a figure.
+
+74
+00:04:53.310 --> 00:04:57.160
+Now, this functionality isn't in
+the basic matplotlib space, but
+
+75
+00:04:57.160 --> 00:05:00.750
+it's in the toolkits,
+which tend to ship with matplotlib.
+
+76
+00:05:00.750 --> 00:05:02.840
+There are several different
+toolkits available, and
+
+77
+00:05:02.840 --> 00:05:06.000
+while they tend to be packaged,
+they aren't considered core.
+
+78
+00:05:07.840 --> 00:05:11.178
+The toolkit that we're going to
+use is called the axes grid,
+
+79
+00:05:11.178 --> 00:05:15.442
+and we import it from
+the mpl_toolkits.axes_grid1.inset_locator.
+
+80
+00:05:19.605 --> 00:05:22.469
+We create a new figure and
+we put up our box plot.
+
+81
+00:05:29.662 --> 00:05:34.429
+Then we just call the inset locator and
+pass it the current axes object we want
+
+82
+00:05:34.429 --> 00:05:38.400
+composition on top of,
+followed by the size of our new axis.
+
+83
+00:05:38.400 --> 00:05:41.260
+And we can specify this
+as both a width and
+
+84
+00:05:41.260 --> 00:05:44.790
+a height in percentage
+from the parent axes.
+
+85
+00:05:44.790 --> 00:05:48.100
+Then we give it a number from the place
+in which we wanted to drop the new axes.
+
+86
+00:05:49.350 --> 00:05:53.100
+This isn't quite as flexible as with grid
+spec where we're essentially trying to
+
+87
+00:05:53.100 --> 00:05:55.750
+connect the plot to one of
+ten different locations.
+
+88
+00:05:56.980 --> 00:05:58.640
+I'll put in position two here,
+
+89
+00:05:58.640 --> 00:06:02.340
+which will place the axes in
+the upper left of the figure.
+
+90
+00:06:02.340 --> 00:06:06.370
+Then we just push a histogram to that
+axes and it behaves as we would expect.
+
+91
+00:06:08.520 --> 00:06:10.590
+We've a little clash on the yaxis but
+
+92
+00:06:10.590 --> 00:06:13.520
+that's easy enough to
+flip on the inset plot.
+
+93
+00:06:13.520 --> 00:06:16.910
+We just access the yaxis of the plot and
+call tick_right.
+
+94
+00:06:16.910 --> 00:06:19.080
+And there we are.
+
+95
+00:06:19.080 --> 00:06:23.370
+An inset plot showing a distribution as
+a histogram layered on top of a box plot.
+
+96
+00:06:25.470 --> 00:06:29.160
+Now, the box plot has a few more functions
+which are worth investigating before we
+
+97
+00:06:29.160 --> 00:06:30.410
+finish this lecture off.
+
+98
+00:06:31.460 --> 00:06:33.850
+First, if you don't
+supply the whis argument,
+
+99
+00:06:33.850 --> 00:06:38.510
+the whiskers actually only go out to
+halfway between the interquartile range.
+
+100
+00:06:39.510 --> 00:06:42.730
+You can figure that out through the top of
+the box minus the bottom of the box and
+
+101
+00:06:42.730 --> 00:06:44.364
+times that value by 1.5.
+
+102
+00:06:45.660 --> 00:06:48.540
+This is one method of detecting outliers.
+
+103
+00:06:48.540 --> 00:06:51.690
+And the points which are plotted
+beyond the whiskers are called fliers.
+
+104
+00:06:52.790 --> 00:06:56.720
+You can see how this method of outlier
+detection differs with respect to our
+
+105
+00:06:56.720 --> 00:06:57.695
+three distributions.
+
+106
+00:07:00.235 --> 00:07:04.395
+You can also plot the confidence interval
+in a couple of different ways on the data.
+
+107
+00:07:04.395 --> 00:07:08.685
+The most common is to add notches to the
+box plot representing the 95% confidence
+
+108
+00:07:08.685 --> 00:07:13.025
+interval of the data and there are lots
+of other ways to customize the box plot.
+
+109
+00:07:14.730 --> 00:07:17.849
+The box plot is one of the more
+common plots that you might use as
+
+110
+00:07:17.849 --> 00:07:18.472
+a data scientist.
+
+111
+00:07:19.492 --> 00:07:22.890
+And matplotlib has significant support for
+different kinds of box plots.
+
+112
+00:07:24.130 --> 00:07:27.160
+Here the matplotlib documentation is key.
+
+113
+00:07:27.160 --> 00:07:30.150
+You can find links in the course
+resources to the API,
+
+114
+00:07:30.150 --> 00:07:32.130
+which describes the box
+plot functionality.
+
+115
+00:07:34.190 --> 00:07:36.130
+I've got one more plot to show you.
+
+116
+00:07:36.130 --> 00:07:39.570
+A two dimensional histogram which
+is better known as a heat map.
+
+117
+00:07:39.570 --> 00:07:42.310
+Then we'll look at a couple more
+advance features of matplotlib.
+
+118
+00:07:42.310 --> 00:07:43.750
+And I'll see you in the next lecture.

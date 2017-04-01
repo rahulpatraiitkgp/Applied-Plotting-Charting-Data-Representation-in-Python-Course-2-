@@ -1,0 +1,566 @@
+WEBVTT
+
+1
+00:00:08.762 --> 00:00:12.939
+In module one, we talked about principles,
+which underly good visualizations,
+
+2
+00:00:12.939 --> 00:00:15.690
+we pulled from work by Cairo and Tufty.
+
+3
+00:00:15.690 --> 00:00:19.530
+In Module 2, we opened up
+the Matplotlib Python Library.
+
+4
+00:00:19.530 --> 00:00:21.000
+Starting with the architecture and
+
+5
+00:00:21.000 --> 00:00:24.140
+working our way through some
+the most common kinds of plots.
+
+6
+00:00:24.140 --> 00:00:26.240
+Scatter plots, line graphs and bar charts.
+
+7
+00:00:27.300 --> 00:00:29.710
+In this module,
+we're going to do a bit deeper and
+
+8
+00:00:29.710 --> 00:00:34.490
+talk about multiple plots with the same
+figure, interaction, animation and
+
+9
+00:00:34.490 --> 00:00:38.290
+a few more kinds of plots which you might
+find useful in your data science journey.
+
+10
+00:00:39.930 --> 00:00:41.900
+Now, if you've been
+doing these assignments,
+
+11
+00:00:41.900 --> 00:00:45.120
+you've undoubtedly been visiting
+our course discussion forms,
+
+12
+00:00:45.120 --> 00:00:50.150
+going to stack overflow, and reading
+the map plot live API documentation.
+
+13
+00:00:50.150 --> 00:00:53.190
+I want to point you to
+the Matplotlib mailing list as well
+
+14
+00:00:53.190 --> 00:00:54.540
+is another great resource.
+
+15
+00:00:54.540 --> 00:00:58.700
+There would be resource posted
+below on how to browse that list.
+
+16
+00:00:58.700 --> 00:01:02.030
+It's pretty common with open source
+projects to have two mailing lists.
+
+17
+00:01:02.030 --> 00:01:04.450
+One for developers and
+the other for users.
+
+18
+00:01:04.450 --> 00:01:08.030
+The users place is where most of
+the question answering happens.
+
+19
+00:01:08.030 --> 00:01:10.850
+But I encourage to you look at
+the developer archives, too.
+
+20
+00:01:10.850 --> 00:01:14.360
+To get an idea as to what these kind of
+projects look like behind the scenes.
+
+21
+00:01:16.080 --> 00:01:19.580
+Let's start this module with
+a deeper look at subplots.
+
+22
+00:01:19.580 --> 00:01:24.820
+Thus far we have been using a signal axis
+object to plot a single graph or figure.
+
+23
+00:01:24.820 --> 00:01:28.960
+Sometimes it is useful to show
+two complex plot side by side for
+
+24
+00:01:28.960 --> 00:01:30.745
+the viewer to compare.
+
+25
+00:01:30.745 --> 00:01:34.300
+Matplotlib handles this
+with a single figure.
+
+26
+00:01:34.300 --> 00:01:38.480
+Let's first set our rendering
+backend to the NPA backend,
+
+27
+00:01:38.480 --> 00:01:42.010
+then import our pyplot module and
+NumPy, as we'll need then both.
+
+28
+00:01:43.770 --> 00:01:46.360
+If we look at the subplot documentation,
+
+29
+00:01:46.360 --> 00:01:49.080
+we see that the first argument
+is the number of rows,
+
+30
+00:01:49.080 --> 00:01:52.370
+the second the number of columns,
+and the third is the plot number.
+
+31
+00:01:53.840 --> 00:01:57.770
+In matplotlib, a conceptual grid
+is overlayed on the figure.
+
+32
+00:01:57.770 --> 00:02:02.460
+And a subplot command allows you to create
+axis to different portions of this grid.
+
+33
+00:02:03.540 --> 00:02:06.580
+For instance, if we want to to
+create two plots side by side,
+
+34
+00:02:06.580 --> 00:02:08.810
+we would call subplot with
+the parameters 1, 2, and 1.
+
+35
+00:02:08.810 --> 00:02:13.240
+This would allow us to use 1 row,
+with 2 columns, and
+
+36
+00:02:13.240 --> 00:02:15.755
+set the first axis to be the current axis.
+
+37
+00:02:16.910 --> 00:02:17.670
+This.
+Let's do this now.
+
+38
+00:02:18.805 --> 00:02:22.870
+We'll create a new figure and then a new
+subplot with one row and two columns.
+
+39
+00:02:22.870 --> 00:02:25.410
+And we'll ask for the left hand side axis.
+
+40
+00:02:26.560 --> 00:02:30.530
+The greatest number alternatively
+from left to right and top to bottom.
+
+41
+00:02:30.530 --> 00:02:33.830
+So subsequent calls to plot would
+create the left hand side plot.
+
+42
+00:02:34.970 --> 00:02:38.100
+Okay, great we've got a skinny
+plot on the left hand side.
+
+43
+00:02:39.710 --> 00:02:44.081
+We can then call subplot again with the
+last parameter as a two to plot new data
+
+44
+00:02:44.081 --> 00:02:45.943
+to a plot on the right hand side.
+
+45
+00:02:57.004 --> 00:02:58.375
+And that's nice.
+
+46
+00:02:58.375 --> 00:03:00.955
+Now we have two plots,
+each with their own axis objects.
+
+47
+00:03:02.325 --> 00:03:05.625
+Now the norm with matplotlib
+is that you store the axis
+
+48
+00:03:05.625 --> 00:03:08.570
+object that you get back from the subplot.
+
+49
+00:03:08.570 --> 00:03:10.376
+But you can call subplot again.
+
+50
+00:03:10.376 --> 00:03:12.820
+At any time with the parameters
+that interest you
+
+51
+00:03:12.820 --> 00:03:14.630
+in order to get back a given axis.
+
+52
+00:03:15.730 --> 00:03:18.887
+Here, let's put exponential
+on the linear graph 2
+
+53
+00:03:30.949 --> 00:03:33.118
+This demonstrates a common problem,
+
+54
+00:03:33.118 --> 00:03:37.725
+it looked like linear had roughly the same
+area under the line on the chart until we
+
+55
+00:03:37.725 --> 00:03:40.890
+asked matplotlib to put
+them into one graph.
+
+56
+00:03:40.890 --> 00:03:42.730
+Then the y axis was refreshed.
+
+57
+00:03:43.920 --> 00:03:46.960
+There would be a big problem with
+misleading the reader if we didn't find
+
+58
+00:03:46.960 --> 00:03:50.080
+a way to lock axis between two plots.
+
+59
+00:03:50.080 --> 00:03:54.130
+When you create a new subplot you
+are able to share the x, y, or
+
+60
+00:03:54.130 --> 00:03:57.640
+both axis using the share x and
+share y parameters.
+
+61
+00:03:59.220 --> 00:04:02.440
+Here's how we could clean this up,
+we create a new figure.
+
+62
+00:04:02.440 --> 00:04:05.660
+Then created a subplot on
+the left-hand side store it in AX1.
+
+63
+00:04:07.090 --> 00:04:10.060
+After plotting that data we create
+the axis on the right-hand side,
+
+64
+00:04:10.060 --> 00:04:14.560
+and we indicate explicitly
+we want to share the y-axis.
+
+65
+00:04:14.560 --> 00:04:19.270
+Now we don't have to store the subplot
+to a variable like we did with AX1.
+
+66
+00:04:19.270 --> 00:04:23.020
+Remember that when you use the scripting
+interface, high plot is going to get
+
+67
+00:04:23.020 --> 00:04:28.330
+the current axis object with GCA or
+get current axis underneath.
+
+68
+00:04:28.330 --> 00:04:31.770
+So a call to pipeplot.plot
+will transparently work with
+
+69
+00:04:31.770 --> 00:04:33.810
+the last axis objects that we're using.
+
+70
+00:04:35.160 --> 00:04:36.110
+There we go.
+
+71
+00:04:36.110 --> 00:04:38.725
+Two plots side by side and
+we've locked the y axis.
+
+72
+00:04:40.410 --> 00:04:44.530
+Now, those of you who have been playing
+close attention will note that I used
+
+73
+00:04:44.530 --> 00:04:47.330
+the add subplot function
+in the last module.
+
+74
+00:04:47.330 --> 00:04:49.890
+But I didn't pass in three parameters,
+just one.
+
+75
+00:04:49.890 --> 00:04:55.820
+The maplotlib developers allow you to
+specify the row, columns, and number
+
+76
+00:04:55.820 --> 00:04:59.865
+of the plot that you want with either
+three parameters or a single parameter.
+
+77
+00:04:59.865 --> 00:05:03.210
+Where the hundreds values the first
+argument, the tens the second argument,
+
+78
+00:05:03.210 --> 00:05:04.480
+and the ones the third argument.
+
+79
+00:05:06.150 --> 00:05:10.230
+So we will call subplot with three
+parameters, one, two, and one.
+
+80
+00:05:10.230 --> 00:05:12.490
+And the axis that return
+should be equal to 1,
+
+81
+00:05:12.490 --> 00:05:16.680
+which is created with the 1 parameter,
+121.
+
+82
+00:05:16.680 --> 00:05:20.950
+I'm frankly not a big fan
+of this second syntax.
+
+83
+00:05:20.950 --> 00:05:24.863
+It feels pretty hacky and it really
+only saves typing two commas and yet
+
+84
+00:05:24.863 --> 00:05:26.796
+limits us to single digit radius.
+
+85
+00:05:29.264 --> 00:05:32.407
+Now computer science folks might
+feel a little twitch inside
+
+86
+00:05:32.407 --> 00:05:34.820
+like something's wrong with this notation.
+
+87
+00:05:34.820 --> 00:05:38.090
+And I'll say that it certainly bugged
+me the first few times I saw it.
+
+88
+00:05:39.150 --> 00:05:43.720
+An important fact to remember is that
+the plot location in the matrix of items
+
+89
+00:05:43.720 --> 00:05:45.640
+is index starting at one and
+
+90
+00:05:45.640 --> 00:05:50.050
+not at zero, as would be the convention
+if you were using something like NumPy.
+
+91
+00:05:50.050 --> 00:05:54.070
+So if you're iterating through a matrix or
+list, create subplots.
+
+92
+00:05:54.070 --> 00:05:57.460
+Remember to start at position plus one.
+
+93
+00:05:57.460 --> 00:06:00.981
+Now, there's a nice function
+called subplots, note the plural,
+
+94
+00:06:00.981 --> 00:06:04.960
+which allows you to get many axis objects
+at once, and I think this is great.
+
+95
+00:06:06.470 --> 00:06:10.483
+So, if we wanted to get a three by
+three grid with all of the axis x and
+
+96
+00:06:10.483 --> 00:06:12.940
+y ranges locked, we can do so like this.
+
+97
+00:06:14.820 --> 00:06:17.730
+The syntax looks a little goofy
+maybe since we're unpacking
+
+98
+00:06:17.730 --> 00:06:20.540
+the results of the subplots
+function directly.
+
+99
+00:06:20.540 --> 00:06:24.180
+Wherein it's an effective way to build
+a grid where everything shares an axis.
+
+100
+00:06:25.340 --> 00:06:27.830
+And of course, you could just
+return the tuple of plots and
+
+101
+00:06:27.830 --> 00:06:29.459
+iterate it over if you wanted to.
+
+102
+00:06:30.940 --> 00:06:33.470
+The results however look really nice.
+
+103
+00:06:33.470 --> 00:06:36.730
+Note that this method turns off the y and
+x labels except for
+
+104
+00:06:36.730 --> 00:06:39.490
+those plots which are on the left hand
+side or the bottom of the figure.
+
+105
+00:06:40.740 --> 00:06:42.520
+If you want to turn the labels back on,
+
+106
+00:06:42.520 --> 00:06:45.660
+you need to iterate through the axis
+objects and do it yourself.
+
+107
+00:06:46.810 --> 00:06:49.920
+You could do this directly through
+the axis objects you have or
+
+108
+00:06:49.920 --> 00:06:53.510
+iterate through all the axis objects
+in the figure and change the x and
+
+109
+00:06:53.510 --> 00:06:55.150
+y tick labels to be visible.
+
+110
+00:06:57.870 --> 00:07:01.560
+Unfortunately, on the notebook
+backend on my installation,
+
+111
+00:07:01.560 --> 00:07:04.010
+this doesn't redraw the figure.
+
+112
+00:07:04.010 --> 00:07:08.940
+But you can force the figure to redraw
+by calling the canvas draw function.
+
+113
+00:07:08.940 --> 00:07:13.960
+Remember you can get the current figure
+at any time using pyplots gcf or
+
+114
+00:07:13.960 --> 00:07:15.420
+get current figure or function.
+
+115
+00:07:17.520 --> 00:07:21.280
+Okay, so those are the basics
+of subplots and matplotlib.
+
+116
+00:07:21.280 --> 00:07:23.870
+You can see that you can leverage
+everything you learned to the last
+
+117
+00:07:23.870 --> 00:07:27.605
+module with this new knowledge to create
+figures which have rich subplots.
+
+118
+00:07:29.480 --> 00:07:33.050
+In the next module, I want to exploit
+this while introducing you to pretty
+
+119
+00:07:33.050 --> 00:07:35.730
+fundamental data science chart,
+the histogram.

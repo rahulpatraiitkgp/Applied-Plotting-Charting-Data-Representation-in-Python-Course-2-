@@ -1,0 +1,373 @@
+WEBVTT
+
+1
+00:00:09.228 --> 00:00:13.828
+So far we focused on static images, but
+matplotlib does have some support for
+
+2
+00:00:13.828 --> 00:00:16.900
+both animation and interactivity.
+
+3
+00:00:16.900 --> 00:00:20.700
+We call this the backend that
+renders the plot to the stream.
+
+4
+00:00:20.700 --> 00:00:25.240
+Animation and interactivity heavily depend
+on support from this backend layer.
+
+5
+00:00:25.240 --> 00:00:29.070
+And using a backend like the image
+png1 doesn't provide this.
+
+6
+00:00:29.070 --> 00:00:34.720
+However, the NBN backend or the matplotlib
+notebook magic function does provide for
+
+7
+00:00:34.720 --> 00:00:37.259
+some interactivity, so
+we can leverage that here.
+
+8
+00:00:38.860 --> 00:00:43.890
+The Maplotlib.animation module contains
+important helpers for building animations.
+
+9
+00:00:45.220 --> 00:00:50.170
+For our discussion, the important
+object here is to call FuncAnimation.
+
+10
+00:00:50.170 --> 00:00:55.267
+And it builds an animation by iteratively
+calling a function which you define.
+
+11
+00:00:55.267 --> 00:00:58.822
+Essentially, your function will
+either clear the axis object and
+
+12
+00:00:58.822 --> 00:01:01.613
+redraw the next frame,
+which you want users to see or
+
+13
+00:01:01.613 --> 00:01:04.550
+will return a list of objects
+which need to be redrawn.
+
+14
+00:01:06.380 --> 00:01:08.050
+Let's see an example.
+
+15
+00:01:08.050 --> 00:01:10.730
+First, let's import the animation module.
+
+16
+00:01:11.870 --> 00:01:15.029
+Next, let's define a cut-off for
+our animation.
+
+17
+00:01:16.420 --> 00:01:21.220
+I'd like to show you how the histogram is
+built from one sample through 100 samples.
+
+18
+00:01:21.220 --> 00:01:25.840
+So let's set our cut off to 100
+then randomly pick 100 numbers and
+
+19
+00:01:25.840 --> 00:01:26.920
+put them into a variable.
+
+20
+00:01:28.770 --> 00:01:32.940
+Okay, next we want to actually create
+a function which will do the plotting.
+
+21
+00:01:32.940 --> 00:01:34.709
+We'll call this function update.
+
+22
+00:01:34.709 --> 00:01:39.586
+Now the matplotlib FuncAnimation object is
+going to call this every few milliseconds
+
+23
+00:01:39.586 --> 00:01:43.187
+and pass in the frame number we
+are on starting with frame zero.
+
+24
+00:01:43.187 --> 00:01:47.370
+So we can use this is as the index into
+our array values, which we called x.
+
+25
+00:01:49.310 --> 00:01:52.310
+The very first thing we want to
+do is see if the current frame
+
+26
+00:01:52.310 --> 00:01:54.040
+is at the end of our list.
+
+27
+00:01:54.040 --> 00:01:56.630
+If so,
+we need to tell the animation to stop.
+
+28
+00:01:56.630 --> 00:02:01.130
+We do this by calling the stop object
+on the event source object attached
+
+29
+00:02:01.130 --> 00:02:02.657
+to the FuncAnimation object.
+
+30
+00:02:03.820 --> 00:02:05.650
+We're going to call our animation a.
+
+31
+00:02:05.650 --> 00:02:07.610
+So, I'll just use that here.
+
+32
+00:02:07.610 --> 00:02:11.430
+I didn't know we can just
+drop plot as per normal.
+
+33
+00:02:11.430 --> 00:02:14.840
+So lets first clear
+the current axis with cla,
+
+34
+00:02:14.840 --> 00:02:19.290
+then create a histogram using a set of
+value in the x up to the current value.
+
+35
+00:02:19.290 --> 00:02:21.980
+Slicing is great for this.
+
+36
+00:02:21.980 --> 00:02:24.880
+Now we also need to consider the bins.
+
+37
+00:02:24.880 --> 00:02:29.209
+Previously we just passed a single
+number in for the bins eg 10 or 100.
+
+38
+00:02:30.220 --> 00:02:33.420
+But we can also pass in
+the spacing in between bins.
+
+39
+00:02:34.510 --> 00:02:38.770
+Since we want all of our bins set and
+evenly spaced, because we're redrawing
+
+40
+00:02:38.770 --> 00:02:43.770
+the animation in each clock tick,
+we can use the NumPy arange function.
+
+41
+00:02:43.770 --> 00:02:46.590
+This will ensure that
+the bins don't change.
+
+42
+00:02:46.590 --> 00:02:50.649
+We use the balance of minus 4 to plus 4,
+in half-step increments.
+
+43
+00:02:52.060 --> 00:02:54.930
+We also need to set the axis
+values since otherwise,
+
+44
+00:02:54.930 --> 00:02:59.600
+the histogram will continually autoscale
+between frames which could be annoying.
+
+45
+00:02:59.600 --> 00:03:05.250
+So I'll just hard code some values here,
+often the bin sizes and use 30 as an x and
+
+46
+00:03:05.250 --> 00:03:08.820
+a couple of labels and titles to
+make the chart look a little better.
+
+47
+00:03:10.830 --> 00:03:13.690
+Finally, let me show you another
+text function called annotate.
+
+48
+00:03:14.840 --> 00:03:17.610
+This places text at a certain
+position in the chart and
+
+49
+00:03:17.610 --> 00:03:20.930
+we'll use it to show how many samples are
+currently being rendered to the screen.
+
+50
+00:03:22.620 --> 00:03:26.850
+Now let's just generate a new figure, then
+call the FuncAnimation constructor and
+
+51
+00:03:26.850 --> 00:03:28.270
+we'll assign this to variable a.
+
+52
+00:03:29.270 --> 00:03:32.510
+The first parameter is the figure
+that we're working with.
+
+53
+00:03:32.510 --> 00:03:33.720
+This isn't so important here,
+
+54
+00:03:33.720 --> 00:03:37.720
+since we're using the pipe plot scripting
+interface to manage the figure.
+
+55
+00:03:37.720 --> 00:03:42.750
+Then the name of our function and then the
+amount of time we want between updates.
+
+56
+00:03:42.750 --> 00:03:44.220
+Let's set this to 100 milliseconds.
+
+57
+00:03:45.370 --> 00:03:48.150
+Also, remember that we have
+to set this to variable a.
+
+58
+00:03:48.150 --> 00:03:50.979
+Otherwise, our function isn't going
+to know how to stop the animation.
+
+59
+00:03:52.090 --> 00:03:52.820
+There we go.
+
+60
+00:03:52.820 --> 00:03:57.143
+A nice example of how sampling from a
+distribution an be used with an animation.
+
+61
+00:04:01.503 --> 00:04:05.730
+FuncAnimation like most of the other
+classes in the animation package is
+
+62
+00:04:05.730 --> 00:04:08.780
+a subclass of the animation object.
+
+63
+00:04:08.780 --> 00:04:11.570
+The animation object has
+a handy safe function,
+
+64
+00:04:11.570 --> 00:04:14.590
+which allows you to write
+the animation to a file.
+
+65
+00:04:14.590 --> 00:04:17.510
+This requires additional
+third party library such as
+
+66
+00:04:17.510 --> 00:04:20.790
+FFM page which can take
+a bit to install and set up.
+
+67
+00:04:20.790 --> 00:04:25.334
+But the result is that you can fairly
+easily export your animations directly
+
+68
+00:04:25.334 --> 00:04:28.246
+from the Jupiter Web
+programming environment.
+
+69
+00:04:28.246 --> 00:04:33.164
+A figure animation with four sub-plots,
+one for each kind of distribution we might
+
+70
+00:04:33.164 --> 00:04:37.400
+be interested in understanding,
+could be pretty neat.
+
+71
+00:04:37.400 --> 00:04:41.270
+We could plot the samples for the normal
+distribution in one, for a gamma
+
+72
+00:04:41.270 --> 00:04:45.540
+distribution in another, and then maybe
+a couple of paramaterized distributions
+
+73
+00:04:45.540 --> 00:04:49.920
+like the normal distribution with
+different levels of standard deviation.
+
+74
+00:04:49.920 --> 00:04:54.060
+This would be a great way to practice the
+skills that you've learned in this module,
+
+75
+00:04:54.060 --> 00:04:57.910
+as it would require that you manage
+multiple sub-plots within an animation
+
+76
+00:04:57.910 --> 00:04:58.880
+using histograms.
+
+77
+00:05:00.580 --> 00:05:03.970
+In the next lecture, we'll dig into
+this event framework a bit more and
+
+78
+00:05:03.970 --> 00:05:05.040
+look at the interactivity.

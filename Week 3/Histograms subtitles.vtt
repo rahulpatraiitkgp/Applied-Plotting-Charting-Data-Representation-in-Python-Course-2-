@@ -1,0 +1,645 @@
+WEBVTT
+
+1
+00:00:09.731 --> 00:00:13.140
+A histogram is a bar chart which shows
+the frequency of a given phenomena.
+
+2
+00:00:14.350 --> 00:00:17.080
+A great example
+are probability distributions.
+
+3
+00:00:17.080 --> 00:00:19.690
+For instance, in the first
+course in this specialization,
+
+4
+00:00:19.690 --> 00:00:23.720
+we touched on the difference between
+the random, uniform, normal, and
+
+5
+00:00:23.720 --> 00:00:25.050
+chi squared distributions.
+
+6
+00:00:26.510 --> 00:00:31.260
+Probability function can be visualized
+as a curve, where the y-axis holds
+
+7
+00:00:31.260 --> 00:00:37.100
+the probability a given value would occur,
+and the x-axis is the value itself.
+
+8
+00:00:37.100 --> 00:00:40.440
+This is called a probability
+density function.
+
+9
+00:00:40.440 --> 00:00:44.610
+The y-axis values are limited to between
+zero and one, where zero means there's no
+
+10
+00:00:44.610 --> 00:00:48.910
+chance of a given value occurring and one
+means that the value will always occur.
+
+11
+00:00:49.910 --> 00:00:54.260
+The x-axis values are labeled in
+terms of the distribution function.
+
+12
+00:00:54.260 --> 00:00:55.870
+In the case of the normal distribution,
+
+13
+00:00:55.870 --> 00:00:58.350
+this is usually in terms
+of standard deviations.
+
+14
+00:01:00.830 --> 00:01:05.700
+So a histogram is just a bar chart where
+the x-axis is a given observation and
+
+15
+00:01:05.700 --> 00:01:10.330
+the y-axis is the frequency with
+which that observation occurs.
+
+16
+00:01:10.330 --> 00:01:13.640
+So we should be able to plot
+a given probability distribution
+
+17
+00:01:13.640 --> 00:01:14.639
+by sampling from it.
+
+18
+00:01:15.680 --> 00:01:19.100
+Now, recall that sampling means
+that we just pick a number out of
+
+19
+00:01:19.100 --> 00:01:24.140
+the distribution, like rolling a die or
+pulling a single card out of a deck.
+
+20
+00:01:24.140 --> 00:01:25.830
+As we do this over and over again,
+
+21
+00:01:25.830 --> 00:01:28.900
+we get a more accurate
+description of the distribution.
+
+22
+00:01:30.670 --> 00:01:33.190
+Let's pull some samples from
+the normal distribution and
+
+23
+00:01:33.190 --> 00:01:36.170
+plot four different
+histograms as subplots.
+
+24
+00:01:36.170 --> 00:01:39.470
+First I'll create our 2 x
+2 grade of axis objects.
+
+25
+00:01:39.470 --> 00:01:42.870
+In this case, we don't want to
+share the y-axis between the plots
+
+26
+00:01:42.870 --> 00:01:46.300
+since we're intentionally looking at
+a number of different sizes of samples.
+
+27
+00:01:47.500 --> 00:01:51.290
+We're mostly interested in how
+uniform the distribution looks.
+
+28
+00:01:51.290 --> 00:01:55.954
+Then we can iterate through a list
+of four different values, 10, 100,
+
+29
+00:01:55.954 --> 00:01:57.905
+1,000 and 10,000.
+
+30
+00:01:57.905 --> 00:01:59.670
+And we'll pull samples from the NumPy.
+
+31
+00:02:01.260 --> 00:02:04.990
+Remember that the normal function of
+random just creates a list of numbers
+
+32
+00:02:04.990 --> 00:02:07.230
+based on the underlying
+normal distribution.
+
+33
+00:02:09.010 --> 00:02:13.250
+We can then plot these to a given
+axis object using the hist function.
+
+34
+00:02:13.250 --> 00:02:14.659
+And set the title as appropriate.
+
+35
+00:02:16.320 --> 00:02:17.458
+Well, there we go.
+
+36
+00:02:17.458 --> 00:02:20.555
+The first plot only has ten samples,
+so it looks pretty jagged.
+
+37
+00:02:20.555 --> 00:02:23.953
+And in my version here I don't think
+anyone would say this is obviously
+
+38
+00:02:23.953 --> 00:02:25.170
+a normal distribution.
+
+39
+00:02:26.200 --> 00:02:30.830
+When we jump to 100 samples,
+it gets better, but still quite jagged.
+
+40
+00:02:30.830 --> 00:02:35.140
+Then it seems to smooth out a bit on
+the plots for 1,000 and 10,000 samples.
+
+41
+00:02:36.610 --> 00:02:40.650
+But if we look closely, we can see
+that the bar of the 10,000 plots
+
+42
+00:02:40.650 --> 00:02:44.300
+are actually wider than those of the 10 or
+the 100 plot.
+
+43
+00:02:44.300 --> 00:02:45.160
+What's going on here?
+
+44
+00:02:46.790 --> 00:02:52.324
+By default, the histogram in Matplotlib
+uses ten bins, that is ten different bars.
+
+45
+00:02:52.324 --> 00:02:57.020
+Here we created a shared x-axis, and
+as we sample more from the distribution,
+
+46
+00:02:57.020 --> 00:03:01.600
+we're more likely to get outlier
+values further from our mean.
+
+47
+00:03:01.600 --> 00:03:06.720
+Thus, ten bins for n=10 is at
+best capturing ten unique values,
+
+48
+00:03:06.720 --> 00:03:11.970
+while for n=10,000, many values have
+to be combined into a single bin.
+
+49
+00:03:11.970 --> 00:03:15.152
+Let's do the same function
+with the bin set to 100
+
+50
+00:03:58.547 --> 00:04:02.264
+Now we see that the 10,000 sampled
+plot looks much smoother than all of
+
+51
+00:04:02.264 --> 00:04:03.730
+the others.
+
+52
+00:04:03.730 --> 00:04:07.732
+And the 10 sample plot shows that each
+sample is basically in its own bin.
+
+53
+00:04:09.280 --> 00:04:12.510
+So I think this brings up an important
+question of how many bins you should
+
+54
+00:04:12.510 --> 00:04:13.998
+plot when using a histogram.
+
+55
+00:04:13.998 --> 00:04:17.550
+I'm afraid that the answer
+isn't really clear.
+
+56
+00:04:17.550 --> 00:04:20.688
+Both of these plots are true,
+one is a visual of the data
+
+57
+00:04:20.688 --> 00:04:25.250
+at a coarse granularity, and
+one at a more fine grain granularity.
+
+58
+00:04:25.250 --> 00:04:30.060
+When we look at the finest granularity
+in our data, plotting with 10,000 bins
+
+59
+00:04:30.060 --> 00:04:33.710
+then the histograms became basically
+useless for decision making.
+
+60
+00:04:33.710 --> 00:04:37.469
+Since they aren't showing trends between
+samples as much as they're just showing
+
+61
+00:04:37.469 --> 00:04:39.780
+the sample size themselves.
+
+62
+00:04:39.780 --> 00:04:42.540
+This is similar to using
+aggregate statistics
+
+63
+00:04:42.540 --> 00:04:47.460
+like the mean in standard deviation
+to describe a sample of a population.
+
+64
+00:04:47.460 --> 00:04:48.965
+These values are coarse and
+
+65
+00:04:48.965 --> 00:04:53.360
+whether they are appropriate depends
+highly on your questions and interests.
+
+66
+00:04:55.370 --> 00:04:58.220
+I've linked here to an optional
+reading which considers the issue
+
+67
+00:04:58.220 --> 00:05:03.010
+of how many bins are appropriate from
+a couple of different statistical stances.
+
+68
+00:05:03.010 --> 00:05:08.006
+But keep in mind this understanding
+that there's just no right or wrong,
+
+69
+00:05:08.006 --> 00:05:10.842
+just useful and useless for a given need.
+
+70
+00:05:10.842 --> 00:05:13.797
+I want to use our newfound
+knowledge of histograms and
+
+71
+00:05:13.797 --> 00:05:18.962
+subplots to introduce you to a more
+flexible GridSpec layout for subplots.
+
+72
+00:05:18.962 --> 00:05:22.900
+The GridSpec allows you to map axes
+over multiple cells in a grid.
+
+73
+00:05:24.000 --> 00:05:28.061
+For instance, let's create a scatter
+plot where the y values come from
+
+74
+00:05:28.061 --> 00:05:32.476
+the normal distribution, and the x
+values come from a random distribution.
+
+75
+00:05:32.476 --> 00:05:37.178
+It's not totally clear from looking at
+this plot what the actual distributions
+
+76
+00:05:37.178 --> 00:05:40.403
+are for each axis, but
+we could add two smaller plots,
+
+77
+00:05:40.403 --> 00:05:43.297
+each histograms,
+to make this a bit more clear.
+
+78
+00:05:50.116 --> 00:05:54.040
+I'm going to define a 3x3 grid,
+nine cells in total.
+
+79
+00:05:54.040 --> 00:05:58.290
+I want the first histogram to take up the
+top right space, and the second histogram
+
+80
+00:05:58.290 --> 00:06:01.970
+to take up the far left bottom two spaces,
+rotated on its side.
+
+81
+00:06:03.300 --> 00:06:06.610
+The original scatter plot can take up
+a two by two square in the bottom right.
+
+82
+00:06:08.250 --> 00:06:09.380
+To use the GridSpec,
+
+83
+00:06:09.380 --> 00:06:13.500
+we first import it, then create a new
+GridSpec, the overall shape that we want.
+
+84
+00:06:14.820 --> 00:06:17.010
+When we add new items with the subplot,
+
+85
+00:06:17.010 --> 00:06:20.510
+instead of specifying the three
+numbers of row, column and
+
+86
+00:06:20.510 --> 00:06:25.900
+position, we pass in the elements of the
+GridSpec object which we wish to cover.
+
+87
+00:06:25.900 --> 00:06:27.640
+And very important here.
+
+88
+00:06:27.640 --> 00:06:32.427
+Because we are using the elements of a
+list, all of the indexing starts at zero,
+
+89
+00:06:32.427 --> 00:06:36.795
+and is very reasonable to use slicing for
+the beginning or ends of lists.
+
+90
+00:06:39.604 --> 00:06:43.769
+The GridSpec is indexed as rows and
+columns using the indexing operator, or
+
+91
+00:06:43.769 --> 00:06:45.480
+square brackets.
+
+92
+00:06:45.480 --> 00:06:48.960
+So we'll create the first subplot and
+histogram in row 0,
+
+93
+00:06:48.960 --> 00:06:53.490
+covering off the first element, the middle
+position, and going to the end of the row.
+
+94
+00:06:54.560 --> 00:06:57.392
+We'll create the side_histogram
+starting in row 1, and
+
+95
+00:06:57.392 --> 00:07:00.680
+continuing to the end of row elements,
+but limited to the 0 column.
+
+96
+00:07:02.580 --> 00:07:05.790
+Finally we'll create the scatter
+plot in the lower_right.
+
+97
+00:07:05.790 --> 00:07:09.130
+When we execute this,
+we see our basic set of plots, great.
+
+98
+00:07:10.760 --> 00:07:13.100
+Now, let's fill this with some data.
+
+99
+00:07:13.100 --> 00:07:17.205
+First the scatter plot, then the top
+histogram, which is for the x values,
+
+100
+00:07:17.205 --> 00:07:19.468
+then the side histogram for the y values.
+
+101
+00:07:30.611 --> 00:07:32.972
+And we want the side
+histogram to be lined up, so
+
+102
+00:07:32.972 --> 00:07:36.300
+let's rotate the layout by
+setting the orientation.
+
+103
+00:07:36.300 --> 00:07:39.585
+There are actually a few ways of
+doing this, but since it's so common,
+
+104
+00:07:39.585 --> 00:07:43.410
+Matplotlib has an orientation parameter
+which we can set to horizontal.
+
+105
+00:07:45.610 --> 00:07:47.540
+Okay, this is close.
+
+106
+00:07:47.540 --> 00:07:51.700
+We don't really care about the value
+of the y-axes for the top histogram or
+
+107
+00:07:51.700 --> 00:07:54.880
+the value of the x-axes for
+the bottom histogram.
+
+108
+00:07:54.880 --> 00:07:57.530
+Since these are probability
+density histograms,
+
+109
+00:07:57.530 --> 00:08:00.810
+we care only about the relative values.
+
+110
+00:08:00.810 --> 00:08:04.350
+One handy function of an axes
+object is that you can clear it.
+
+111
+00:08:04.350 --> 00:08:05.890
+So we don't have to
+create a new figure and
+
+112
+00:08:05.890 --> 00:08:07.820
+do all the GridSpec work all over again.
+
+113
+00:08:09.590 --> 00:08:12.820
+So let's just call the clear
+function on the two histograms.
+
+114
+00:08:12.820 --> 00:08:16.610
+Then we can call the hist function
+with the normed=True argument.
+
+115
+00:08:16.610 --> 00:08:20.070
+Which tells Matplotlib to scale
+the frequency data in the histogram
+
+116
+00:08:20.070 --> 00:08:21.570
+between 0 and 1.
+
+117
+00:08:21.570 --> 00:08:25.090
+Also we can flip the axes of
+the left-hand side histogram
+
+118
+00:08:25.090 --> 00:08:27.076
+using the invert_xaxis function.
+
+119
+00:08:28.670 --> 00:08:30.650
+This gives us a rough solution.
+
+120
+00:08:30.650 --> 00:08:33.092
+We can see that the axes
+values are not aligned.
+
+121
+00:08:33.092 --> 00:08:37.130
+Unfortunately, Matplotlib requires that
+you share axes when creating plots, and
+
+122
+00:08:37.130 --> 00:08:38.820
+we can't do that post hoc sharing.
+
+123
+00:08:39.990 --> 00:08:44.440
+We can however, set the range of the axis
+to clear things up a little bit more.
+
+124
+00:08:44.440 --> 00:08:48.870
+And we do this using the axes set_xlim and
+set_ylim values.
+
+125
+00:08:48.870 --> 00:08:51.200
+I'll just hard code some of
+these in here to demonstrate.
+
+126
+00:08:53.510 --> 00:08:54.600
+And there we go.
+
+127
+00:08:54.600 --> 00:08:58.300
+We can see that our top histogram
+is random, pretty uniform, and
+
+128
+00:08:58.300 --> 00:09:02.279
+that the histogram for the y values indeed
+looks like the normal distribution.
+
+129
+00:09:03.670 --> 00:09:07.780
+In fact, this image looks sort of crudely
+like the image we looked at in the first
+
+130
+00:09:07.780 --> 00:09:12.540
+module of this course, from the MIT and
+Harvard study on MOOC engagement.
+
+131
+00:09:12.540 --> 00:09:16.000
+And it should be pretty clear to
+you now how we might adjust various
+
+132
+00:09:16.000 --> 00:09:17.450
+aspects of this plot so
+
+133
+00:09:17.450 --> 00:09:20.740
+that if we wanted to look even more
+like that engagement image, we could.
+
+134
+00:09:22.610 --> 00:09:23.590
+In the next lecture,
+
+135
+00:09:23.590 --> 00:09:26.300
+we're going to take a look at
+another kind of plot, the box plot.

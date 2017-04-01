@@ -1,0 +1,319 @@
+WEBVTT
+
+1
+00:00:08.768 --> 00:00:12.210
+In this lecture, I want to walk you
+through the process of taking a regular
+
+2
+00:00:12.210 --> 00:00:15.711
+Matplotlib plot and applying Tufte's
+principles of data-ink ratio and
+
+3
+00:00:15.711 --> 00:00:17.870
+char junk to make it
+just a little bit better.
+
+4
+00:00:18.990 --> 00:00:22.463
+I'm going to walk through all of
+the steps using the Jupiter notebooks and
+
+5
+00:00:22.463 --> 00:00:24.098
+you're welcome to follow along.
+
+6
+00:00:24.098 --> 00:00:27.754
+But if you want a bit more of a challenge,
+I'll be including in video
+
+7
+00:00:27.754 --> 00:00:32.003
+quizzes along the way which prompts you
+to solve the problem before I address.
+
+8
+00:00:32.003 --> 00:00:33.370
+This is good practice.
+
+9
+00:00:33.370 --> 00:00:35.910
+The video will pause and
+you can do a quick Google to try and
+
+10
+00:00:35.910 --> 00:00:40.100
+find an appropriate API for
+solving a specific issue.
+
+11
+00:00:40.100 --> 00:00:44.680
+You can try it out in the system, then you
+can compare it to my solution right after.
+
+12
+00:00:44.680 --> 00:00:45.390
+Let's get started.
+
+13
+00:00:46.520 --> 00:00:49.030
+We use a plot of data on the popularity of
+
+14
+00:00:49.030 --> 00:00:52.320
+programming languages
+taken from stack overflow.
+
+15
+00:00:52.320 --> 00:00:58.060
+Here there are five different languages,
+Python, SQL, Java, C++, and JavaScript.
+
+16
+00:00:58.060 --> 00:01:01.983
+We'll find their positions as a rank
+using NumPy as a range function.
+
+17
+00:01:01.983 --> 00:01:05.074
+And here are the popularity
+values from stack overflow.
+
+18
+00:01:08.159 --> 00:01:12.334
+We'll create a bar chart based on rank and
+popularity, then add x and y ticks and
+
+19
+00:01:12.334 --> 00:01:13.460
+set a title.
+
+20
+00:01:13.460 --> 00:01:17.060
+Then when we call plot.show,
+the figure will render.
+
+21
+00:01:17.060 --> 00:01:19.110
+Okay, here's the first challenge.
+
+22
+00:01:19.110 --> 00:01:23.692
+The tics along both axis are annoying and
+sort of clutter the document up a bit.
+
+23
+00:01:23.692 --> 00:01:27.040
+And the labels on the y axis
+really should be direct.
+
+24
+00:01:27.040 --> 00:01:28.859
+So let's remove all of these.
+
+25
+00:01:32.180 --> 00:01:35.559
+I use the tic param's method of plot
+to turn them all off except for
+
+26
+00:01:35.559 --> 00:01:37.400
+the bottom label.
+
+27
+00:01:37.400 --> 00:01:41.260
+It's nice to have a single function
+which can handle all of this.
+
+28
+00:01:41.260 --> 00:01:43.840
+Now our plot still has
+this frame around it, but
+
+29
+00:01:43.840 --> 00:01:46.890
+it's not really necessary and
+it seems a little heavyweight.
+
+30
+00:01:46.890 --> 00:01:48.075
+Let's remove that ink.
+
+31
+00:01:51.983 --> 00:01:54.992
+This is a bit more involved, but
+we can get the current axis,
+
+32
+00:01:54.992 --> 00:01:59.360
+then iterate through all the spine,
+setting their visibility to false.
+
+33
+00:01:59.360 --> 00:02:02.220
+Already, this chart looks
+much more lightweight.
+
+34
+00:02:02.220 --> 00:02:03.120
+Now, the blue is okay,
+
+35
+00:02:03.120 --> 00:02:07.310
+but it doesn't really help us
+differentiate between the bars at all.
+
+36
+00:02:07.310 --> 00:02:09.960
+How about we soften all of
+the hard blacks to gray,
+
+37
+00:02:09.960 --> 00:02:12.880
+then we change the bar
+colors to gray as well.
+
+38
+00:02:12.880 --> 00:02:15.953
+Also, let's keep the Python bar
+the same color of blue that
+
+39
+00:02:15.953 --> 00:02:17.987
+it was originally to make it stand out.
+
+40
+00:02:20.901 --> 00:02:24.160
+Okay, so there are several different
+ways that we could do this.
+
+41
+00:02:24.160 --> 00:02:27.170
+The way I chose was to add
+an alpha parameter to everything,
+
+42
+00:02:27.170 --> 00:02:30.850
+which adds a bit of transparency and
+softens the colors up a bit.
+
+43
+00:02:30.850 --> 00:02:33.610
+I also set the bars themselves to
+a neutral gray color then chose
+
+44
+00:02:33.610 --> 00:02:36.890
+a nice blue from the Python website
+to accentuate the first bar.
+
+45
+00:02:38.380 --> 00:02:41.790
+Of course, we've actually made the chart
+a little bit less accurate right
+
+46
+00:02:41.790 --> 00:02:44.090
+now since we don't have any y labels.
+
+47
+00:02:44.090 --> 00:02:46.670
+Let's fix this and
+remove the y axis label and
+
+48
+00:02:46.670 --> 00:02:49.320
+just directly label the individual bars.
+
+49
+00:02:49.320 --> 00:02:52.351
+We don't really need the y axis label,
+since the title tells
+
+50
+00:02:52.351 --> 00:02:55.333
+us everything we need to know
+about the units in this chart.
+
+51
+00:02:59.167 --> 00:03:03.500
+Removing the label is easy, but changing
+the bars is a little bit of a pain.
+
+52
+00:03:03.500 --> 00:03:07.020
+For this we want to iterate over each
+of the bars and grab its height.
+
+53
+00:03:07.020 --> 00:03:10.159
+Then we want to create a new text
+object with the data information.
+
+54
+00:03:11.210 --> 00:03:14.015
+Unfortunately, this means doing
+a little bit of playing with padding.
+
+55
+00:03:14.015 --> 00:03:18.917
+Here I'll set up the x location to the bar
+x plus the width divided by two and
+
+56
+00:03:18.917 --> 00:03:22.017
+the y location to be
+the bar height minus five.
+
+57
+00:03:22.017 --> 00:03:25.213
+It might seem weird to get the middle
+of the bar in the x dimension, but
+
+58
+00:03:25.213 --> 00:03:28.705
+that's because I'm setting the label
+to center itself, horizontally.
+
+59
+00:03:31.753 --> 00:03:33.100
+And that's all there is to it.
+
+60
+00:03:33.100 --> 00:03:37.423
+A simple series of steps to make your
+bar charts little bit more usable.
+
+61
+00:03:37.423 --> 00:03:40.424
+You could find a full notebook for
+this example and
+
+62
+00:03:40.424 --> 00:03:42.935
+the course [INAUDIBLE] system directory.
+
+63
+00:03:42.935 --> 00:03:46.335
+When you were looking at this,
+did you find a different way to do things?
+
+64
+00:03:46.335 --> 00:03:50.024
+Or do you think there's other places that
+we could go to make this more readable and
+
+65
+00:03:50.024 --> 00:03:52.080
+increase the improvements?
+
+66
+00:03:52.080 --> 00:03:54.830
+Feel free to go into the discussion
+forums and share them with me and
+
+67
+00:03:54.830 --> 00:03:55.490
+your classmates.

@@ -1,0 +1,297 @@
+WEBVTT
+
+1
+00:00:08.822 --> 00:00:12.510
+Matplotlib has support for
+several kinds of bar charts.
+
+2
+00:00:12.510 --> 00:00:16.520
+The most general case, we plot a bar
+chart by sending in a parameter
+
+3
+00:00:16.520 --> 00:00:20.740
+of the x components, and
+a parameter of the height of the bar.
+
+4
+00:00:20.740 --> 00:00:22.930
+Let's do this with our linear data.
+
+5
+00:00:22.930 --> 00:00:26.840
+Here I'm going to just create a list of
+values as long as our linear data list.
+
+6
+00:00:28.790 --> 00:00:32.620
+Then, we'll send this along with
+the linear data's bar heights,
+
+7
+00:00:32.620 --> 00:00:34.180
+to the bar function.
+
+8
+00:00:34.180 --> 00:00:37.109
+We pass in the width of the bar as 0.3.
+
+9
+00:00:45.428 --> 00:00:49.387
+To add a second bar, we simply call
+the bar plot again with new data,
+
+10
+00:00:49.387 --> 00:00:53.209
+keeping in mind that we need to
+adjust the x component to make up for
+
+11
+00:00:53.209 --> 00:00:54.763
+the first bar we plotted.
+
+12
+00:01:00.957 --> 00:01:03.271
+Of course, we'll throw this bar in as red.
+
+13
+00:01:10.890 --> 00:01:14.230
+So the plot looks okay, but not great.
+
+14
+00:01:14.230 --> 00:01:17.520
+All of the x labels are to the far
+left of the items being described, and
+
+15
+00:01:17.520 --> 00:01:19.000
+not centered.
+
+16
+00:01:19.000 --> 00:01:23.100
+Now, we can center them with a given bar,
+using the align parameter, but
+
+17
+00:01:23.100 --> 00:01:25.880
+it's a bit frustrating when you
+have to make multiple bars, and
+
+18
+00:01:25.880 --> 00:01:27.260
+you have to calculate it yourself.
+
+19
+00:01:27.260 --> 00:01:30.950
+And it's a pain to go through and
+add a new data series manually.
+
+20
+00:01:30.950 --> 00:01:34.790
+And this gets worse, we actually
+have to manually iterate through and
+
+21
+00:01:34.790 --> 00:01:36.080
+add in dates if we want them.
+
+22
+00:01:36.080 --> 00:01:39.640
+Because otherwise we couldn't set
+the bar left location appropriately.
+
+23
+00:01:41.020 --> 00:01:41.750
+I'll be honest,
+
+24
+00:01:41.750 --> 00:01:45.900
+bar charts are one of my least favorite
+things to create in matplotlib.
+
+25
+00:01:45.900 --> 00:01:48.550
+I feel like the foundation is there,
+
+26
+00:01:48.550 --> 00:01:51.300
+but some of the ways I
+would want to use the API,
+
+27
+00:01:51.300 --> 00:01:55.940
+such as plotting several series of data
+in groups across time, are sadly missing.
+
+28
+00:01:57.150 --> 00:02:00.470
+There are some other nice
+features of bar charts, though.
+
+29
+00:02:00.470 --> 00:02:04.050
+For instance, you can add error
+bars to each bar as well,
+
+30
+00:02:04.050 --> 00:02:05.590
+using the y-error parameter.
+
+31
+00:02:06.680 --> 00:02:11.250
+For example, each of our pieces of data in
+the linear data might actually be a mean
+
+32
+00:02:11.250 --> 00:02:14.950
+value, computed from many
+different observations.
+
+33
+00:02:14.950 --> 00:02:17.720
+So we could just create
+a list of error values.
+
+34
+00:02:17.720 --> 00:02:22.050
+I'll import from a random function which
+can generate some random integers, and
+
+35
+00:02:22.050 --> 00:02:25.890
+then I'll use a list comprehension
+to generate this new list.
+
+36
+00:02:25.890 --> 00:02:29.505
+Then we could just call plt.bar again,
+and see our new data appear.
+
+37
+00:02:38.428 --> 00:02:41.740
+We can also do stacked bar charts as well.
+
+38
+00:02:41.740 --> 00:02:45.814
+For instance, if we wanted to show
+cumulative values while also keeping
+
+39
+00:02:45.814 --> 00:02:50.155
+the series independent, we could do
+this by setting the bottom parameter and
+
+40
+00:02:50.155 --> 00:02:53.251
+our second plot to be equal
+to first set of data to plot.
+
+41
+00:03:18.071 --> 00:03:22.955
+Finally, we can pivot this bar graph
+into a horizontal bar graph by calling
+
+42
+00:03:22.955 --> 00:03:24.825
+the barh function instead.
+
+43
+00:03:25.900 --> 00:03:30.373
+But note that we have to change the bottom
+to a left and the width to a height.
+
+44
+00:03:47.491 --> 00:03:51.355
+So those are the basics of charting and
+plotting in Matplotlib.
+
+45
+00:03:51.355 --> 00:03:54.315
+I think it's important to realize
+that there really isn't any magic.
+
+46
+00:03:54.315 --> 00:03:57.955
+The scripting layer is really
+a set of convenience functions
+
+47
+00:03:57.955 --> 00:03:59.305
+on top of the object layer.
+
+48
+00:04:00.600 --> 00:04:03.890
+Some people share a preference for
+one or the other, but at the core,
+
+49
+00:04:03.890 --> 00:04:06.370
+they manipulate the same data elements.
+
+50
+00:04:06.370 --> 00:04:09.990
+And I don't think you should think of
+them as being opposed to one another or
+
+51
+00:04:09.990 --> 00:04:11.060
+duplicative.
+
+52
+00:04:11.060 --> 00:04:14.769
+They work together, and being able to
+move back and forth is really important.
+
+53
+00:04:16.230 --> 00:04:19.000
+We've talked about some
+fundamental charts in this module.
+
+54
+00:04:19.000 --> 00:04:22.760
+Scatter plots, line graphs,
+and bar charts.
+
+55
+00:04:22.760 --> 00:04:24.980
+There are more,
+which we'll dig into in the next module.
+
+56
+00:04:24.980 --> 00:04:26.180
+But these are a good basis.
+
+57
+00:04:27.240 --> 00:04:30.050
+The assignment for
+this module is a tough one.
+
+58
+00:04:30.050 --> 00:04:34.050
+It's meant to show you real world
+data visualization problems.
+
+59
+00:04:34.050 --> 00:04:36.930
+You're going to have to lever your
+knowledge of the Pandas Library from
+
+60
+00:04:36.930 --> 00:04:38.300
+the first course and
+
+61
+00:04:38.300 --> 00:04:42.120
+couple this with your new knowledge of
+Matplotlib to come to an elegant solution.
+
+62
+00:04:43.140 --> 00:04:46.660
+But the final result should
+be a portfolio ready piece.
+
+63
+00:04:46.660 --> 00:04:49.230
+So I'll see you in the forums for
+discussions and for help.

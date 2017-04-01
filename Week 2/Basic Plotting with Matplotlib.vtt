@@ -1,0 +1,541 @@
+WEBVTT
+
+1
+00:00:08.579 --> 00:00:11.687
+With the Matplotlib magic
+having set the back end for us,
+
+2
+00:00:11.687 --> 00:00:17.310
+we're going to start our plotting journey
+by making a graph using the plot function.
+
+3
+00:00:17.310 --> 00:00:19.640
+A plot has two axis.
+
+4
+00:00:19.640 --> 00:00:23.510
+An x-axis, along the horizon, and
+a y-axis, which runs vertically.
+
+5
+00:00:24.540 --> 00:00:28.500
+First, let's import the pyplot
+scripting layer as plt.
+
+6
+00:00:28.500 --> 00:00:31.540
+All of the functions which we'll
+run against the pyplot module
+
+7
+00:00:31.540 --> 00:00:33.620
+are part of the scripting
+layer of the architecture.
+
+8
+00:00:34.920 --> 00:00:37.850
+Let's take a look at the plot
+function by looking at the docstring.
+
+9
+00:00:38.860 --> 00:00:42.750
+If you're not used to seeing it, this kind
+of python function declaration with two
+
+10
+00:00:42.750 --> 00:00:50.470
+arguments, the star args and the double
+star kw args, can be a bit obscure.
+
+11
+00:00:50.470 --> 00:00:54.580
+What's being said here by the star args is
+that the function supports any number of
+
+12
+00:00:54.580 --> 00:00:56.310
+unnamed arguments.
+
+13
+00:00:56.310 --> 00:01:01.570
+The DubStar Q also means that it
+supports any number of named arguments.
+
+14
+00:01:01.570 --> 00:01:05.480
+This makes the function declaration very
+flexible since you can pass in basically
+
+15
+00:01:05.480 --> 00:01:07.030
+any number of arguments, named or not.
+
+16
+00:01:08.120 --> 00:01:11.760
+But it makes it difficult to know
+what is an appropriate argument.
+
+17
+00:01:11.760 --> 00:01:15.590
+Reading on, we see that the arguments
+will be interpreted as X, Y pairs.
+
+18
+00:01:17.040 --> 00:01:21.912
+So let's try with just one
+data point at position (3, 2).
+
+19
+00:01:21.912 --> 00:01:26.370
+Here we see that the return
+value is aligned to the object.
+
+20
+00:01:26.370 --> 00:01:28.420
+And we see our first figure appear.
+
+21
+00:01:28.420 --> 00:01:31.460
+We don't see any data points though,
+which is a bit odd.
+
+22
+00:01:31.460 --> 00:01:34.139
+It turns out that the third
+argument should be a string,
+
+23
+00:01:34.139 --> 00:01:36.994
+which signifies how we want
+that data point to be rendered.
+
+24
+00:01:48.201 --> 00:01:52.490
+Let's use a period for a dot and
+we'll see that our data point shows up.
+
+25
+00:01:56.060 --> 00:01:57.120
+There we go.
+
+26
+00:01:57.120 --> 00:01:59.720
+You'll notice that the subsequent
+costs of plot have actually
+
+27
+00:01:59.720 --> 00:02:01.790
+updated our visualization.
+
+28
+00:02:01.790 --> 00:02:05.340
+This is a particular feature
+of this interactive back end.
+
+29
+00:02:05.340 --> 00:02:06.800
+Other back ends might not.
+
+30
+00:02:06.800 --> 00:02:10.265
+For instance, you might see some web
+tutorials using the older percent
+
+31
+00:02:10.265 --> 00:02:16.330
+matplotlib in line magic instead of
+the percent matplotlib notebook magic.
+
+32
+00:02:16.330 --> 00:02:18.370
+The inline magic is not interactive.
+
+33
+00:02:18.370 --> 00:02:22.440
+Subsequent cause create new plots
+as new cells in the notebook.
+
+34
+00:02:22.440 --> 00:02:23.390
+This can be handy too.
+
+35
+00:02:24.900 --> 00:02:27.350
+I think here's where some of the confusion
+
+36
+00:02:27.350 --> 00:02:30.370
+with matplotlib as a library
+tends to come from.
+
+37
+00:02:30.370 --> 00:02:33.330
+In the last lecture, I explained
+that there's an artist layer, and
+
+38
+00:02:33.330 --> 00:02:36.580
+that it is figures,
+with subplots and axes and
+
+39
+00:02:36.580 --> 00:02:39.700
+data points which are rendered
+as patches onto these axes.
+
+40
+00:02:41.100 --> 00:02:43.020
+But we haven't seen any of that here.
+
+41
+00:02:43.020 --> 00:02:46.650
+Instead we've just called one
+function on a module named plot.
+
+42
+00:02:46.650 --> 00:02:47.280
+So what's going on?
+
+43
+00:02:47.280 --> 00:02:53.840
+You see, the pie plot scripting interface
+is managing a lot of objects for you.
+
+44
+00:02:53.840 --> 00:02:59.100
+It keeps track of the latest figure,
+of sub plots and of the axis objects.
+
+45
+00:02:59.100 --> 00:03:03.080
+Moreover, it actually hides some of
+these behind methods of its own.
+
+46
+00:03:03.080 --> 00:03:06.900
+So, the pie plot module itself has
+a function which is called plot.
+
+47
+00:03:06.900 --> 00:03:10.450
+But it redirects calls to this
+function to the current axis object.
+
+48
+00:03:11.510 --> 00:03:13.510
+This makes for
+a significant learning curve and
+
+49
+00:03:13.510 --> 00:03:17.620
+you'll see many discussions in web
+tutorials stack overflow where
+
+50
+00:03:17.620 --> 00:03:21.360
+people are confused by these two different
+approaches to making figures show up.
+
+51
+00:03:22.750 --> 00:03:27.030
+So let's take a look at a comparable
+approach that's a bit more verbose.
+
+52
+00:03:27.030 --> 00:03:30.630
+And some people would call this
+the matplotlib object API.
+
+53
+00:03:30.630 --> 00:03:34.630
+But I think it's more accurate to
+think of it as directly interfacing
+
+54
+00:03:34.630 --> 00:03:36.060
+with the artist layer instead.
+
+55
+00:03:37.130 --> 00:03:41.191
+First I'm going to import a new
+backend called FigureCanvasAgg
+
+56
+00:03:59.711 --> 00:04:03.769
+I don't have to use the modular level use
+function since we're not calling this from
+
+57
+00:04:03.769 --> 00:04:04.750
+the scripting API.
+
+58
+00:04:06.640 --> 00:04:08.530
+All to import the figure object.
+
+59
+00:04:09.820 --> 00:04:13.470
+Then we'll go ahead and create a new
+figure and associate it with the backend.
+
+60
+00:04:15.400 --> 00:04:18.510
+We can then add a subplot
+directly to this.
+
+61
+00:04:18.510 --> 00:04:23.170
+We're going to talk more about subplots
+in a future lecture but this number, 111,
+
+62
+00:04:23.170 --> 00:04:26.010
+actually means that we just want one plot.
+
+63
+00:04:27.670 --> 00:04:28.600
+The return value for
+
+64
+00:04:28.600 --> 00:04:33.060
+the subplot is the axes object,
+which contains methods for plotting.
+
+65
+00:04:33.060 --> 00:04:35.230
+So, we can plot our image as per usual.
+
+66
+00:04:36.970 --> 00:04:38.850
+Now, the backend that we're using,
+
+67
+00:04:38.850 --> 00:04:42.750
+the one for the jupiter notebooks,
+isn't able to render this directly.
+
+68
+00:04:42.750 --> 00:04:46.980
+Since it expects the scripting layer pie
+plot to have created all of the objects.
+
+69
+00:04:48.030 --> 00:04:51.409
+So here, we'll save the figure
+to a png file instead.
+
+70
+00:04:53.046 --> 00:04:57.831
+Then we'll do a quick html cell magic and
+execute that, and see the rendered image.
+
+71
+00:05:00.152 --> 00:05:03.250
+That's a lot more work than
+using the scripting layer.
+
+72
+00:05:03.250 --> 00:05:04.010
+The scripting layer,
+
+73
+00:05:04.010 --> 00:05:09.110
+though, isn't magic, it's just doing some
+of the behind the scenes work for us.
+
+74
+00:05:09.110 --> 00:05:11.920
+For instance,
+when we make a call to pyplot's plot.plot,
+
+75
+00:05:11.920 --> 00:05:16.970
+the scripting layer actually looks to see
+if there's a figure that currently exists
+
+76
+00:05:16.970 --> 00:05:19.880
+and if not, it creates a new one.
+
+77
+00:05:19.880 --> 00:05:22.805
+It then returns the axis for this figure.
+
+78
+00:05:22.805 --> 00:05:27.955
+We can actually get access to the figure
+using the GCF function, which stands for
+
+79
+00:05:27.955 --> 00:05:30.325
+get current figure, of Pi Plot, and
+
+80
+00:05:30.325 --> 00:05:35.025
+get access to the axes as well using
+the GCA function, get current axes.
+
+81
+00:05:37.555 --> 00:05:40.740
+Okay, let's create a new
+figure with Pi Plot.
+
+82
+00:05:40.740 --> 00:05:43.190
+This means it won't update our
+figure at the top of this file.
+
+83
+00:05:44.440 --> 00:05:49.410
+Then let's make a plot, grab the axes,
+and set the x and y limits.
+
+84
+00:05:50.900 --> 00:05:53.100
+We can do this using the axis function.
+
+85
+00:05:54.270 --> 00:05:57.820
+This function takes four
+parameters: a minimum value for
+
+86
+00:05:57.820 --> 00:06:03.380
+x, which we'll put at zero, a maximum
+value for x, which we'll put it at six.
+
+87
+00:06:03.380 --> 00:06:08.060
+In corresponding minimum and maximum
+values for Y which we'll put it zero and
+
+88
+00:06:08.060 --> 00:06:08.810
+10.
+
+89
+00:06:08.810 --> 00:06:11.540
+Since we're doing this
+with the scripting layer
+
+90
+00:06:11.540 --> 00:06:15.800
+once we run the jupiter cell it render
+to the NBA back end as we might expect.
+
+91
+00:06:18.380 --> 00:06:23.450
+All right, one more demonstration on the
+fundamentals of putting together a plot.
+
+92
+00:06:23.450 --> 00:06:26.440
+You can add artists to
+an axes object at any time.
+
+93
+00:06:27.545 --> 00:06:30.870
+Pi plot i doing that for
+us when we call the plot function.
+
+94
+00:06:30.870 --> 00:06:35.180
+It's determining what shape we want from
+the string, the location associate with
+
+95
+00:06:35.180 --> 00:06:38.690
+that shape, then it's creating a patch
+object and adding that to the axes.
+
+96
+00:06:40.520 --> 00:06:43.680
+If we make subsequent calls to
+the plot function this will
+
+97
+00:06:43.680 --> 00:06:44.949
+add more data to our chart.
+
+98
+00:06:46.300 --> 00:06:50.130
+You can see that when this is done, the
+points are rendered in different colors.
+
+99
+00:06:50.130 --> 00:06:53.290
+As the axis recognizes them
+as different data series.
+
+100
+00:06:54.880 --> 00:06:59.090
+We can go further with the axis object
+to the point where we can actually get
+
+101
+00:06:59.090 --> 00:07:01.820
+all of the child objects
+that that axis contains.
+
+102
+00:07:03.420 --> 00:07:06.520
+We do this with the axis
+get children function.
+
+103
+00:07:06.520 --> 00:07:10.440
+Here we can see that there's actually
+three line 2D objects contained
+
+104
+00:07:10.440 --> 00:07:11.870
+in this axis.
+
+105
+00:07:11.870 --> 00:07:13.620
+These are our data points.
+
+106
+00:07:13.620 --> 00:07:17.270
+The number of spines, which are actual
+renderings of the borders of the frame,
+
+107
+00:07:17.270 --> 00:07:21.060
+including tic markers,
+two axis objects, and
+
+108
+00:07:21.060 --> 00:07:24.050
+a bunch of text,
+which are the labels for the chart.
+
+109
+00:07:24.050 --> 00:07:26.720
+There's even a rectangle,
+which is the background for the axis.
+
+110
+00:07:29.090 --> 00:07:29.900
+Okay.
+
+111
+00:07:29.900 --> 00:07:33.760
+There is a whirlwind tour of how to
+be productive with matplotlib and
+
+112
+00:07:33.760 --> 00:07:35.280
+make your first chart.
+
+113
+00:07:35.280 --> 00:07:38.040
+In the next lecture, we're going to go
+through some of the different built in
+
+114
+00:07:38.040 --> 00:07:39.820
+charting options which
+are available to us.

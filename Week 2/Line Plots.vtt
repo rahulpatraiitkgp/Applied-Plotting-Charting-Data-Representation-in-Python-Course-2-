@@ -1,0 +1,640 @@
+WEBVTT
+
+1
+00:00:09.010 --> 00:00:11.351
+We've already seen line
+plots a couple times, but
+
+2
+00:00:11.351 --> 00:00:13.100
+they looked a lot like scatter plots.
+
+3
+00:00:14.200 --> 00:00:17.130
+A line plot is created
+with the plot function.
+
+4
+00:00:17.130 --> 00:00:19.790
+And plots a number of different
+series of data points.
+
+5
+00:00:19.790 --> 00:00:23.200
+Connecting each series
+in a point with a line.
+
+6
+00:00:23.200 --> 00:00:24.590
+Let's jump right in.
+
+7
+00:00:24.590 --> 00:00:28.990
+We can use numpy to use a linear series
+of data points one through eight.
+
+8
+00:00:28.990 --> 00:00:31.891
+We'll also create a number of
+quadratically increasing values as
+
+9
+00:00:31.891 --> 00:00:33.750
+the second series.
+
+10
+00:00:33.750 --> 00:00:37.870
+Remember that you can use broadcasting
+in numpy to do this efficiently.
+
+11
+00:00:37.870 --> 00:00:41.400
+Here we can plot this, and this time
+I'll use the mini formatting language,
+
+12
+00:00:41.400 --> 00:00:45.340
+task map plot lib,
+to draw lines between data points.
+
+13
+00:00:45.340 --> 00:00:48.870
+We'll see the result as a two data series,
+the linear one at the bottom and
+
+14
+00:00:48.870 --> 00:00:50.820
+the quadratic one at the top.
+
+15
+00:00:50.820 --> 00:00:54.262
+Both are using dots because
+we use the -o flag.
+
+16
+00:00:58.245 --> 00:01:03.630
+So there are a couple of things which are
+new about this versus the scatter plots.
+
+17
+00:01:03.630 --> 00:01:08.912
+First, we only gave y-axes values
+to our plot call, no x axes values.
+
+18
+00:01:08.912 --> 00:01:13.042
+Instead, the plot function was smart
+enough to figure out that what we
+
+19
+00:01:13.042 --> 00:01:16.263
+wanted was to use the index
+of the series as the x value.
+
+20
+00:01:16.263 --> 00:01:18.830
+Which is pretty handy when
+you want to make quick plots.
+
+21
+00:01:20.670 --> 00:01:24.870
+Second we see that the plot identifies
+this as two series of data and that
+
+22
+00:01:24.870 --> 00:01:29.030
+the colors of the data from the series are
+different including the data points and
+
+23
+00:01:29.030 --> 00:01:31.390
+the lines between the data points.
+
+24
+00:01:31.390 --> 00:01:34.360
+This is different from the scatter
+plot which required us to label
+
+25
+00:01:34.360 --> 00:01:35.380
+the lines directly.
+
+26
+00:01:37.350 --> 00:01:42.270
+Like all good Python libraries matplotlib
+invents a string based mini language for
+
+27
+00:01:42.270 --> 00:01:44.600
+commonly used formatting.
+
+28
+00:01:44.600 --> 00:01:48.550
+For instance, we could use an s inside of
+the formatting string which would plot
+
+29
+00:01:48.550 --> 00:01:50.690
+another point using a square marker.
+
+30
+00:01:51.970 --> 00:01:54.270
+Or we could use a series of dashes and
+
+31
+00:01:54.270 --> 00:01:58.990
+dots to identify that a line
+should be dashed instead of solid.
+
+32
+00:01:58.990 --> 00:02:00.980
+Here, let's plot another series.
+
+33
+00:02:03.090 --> 00:02:07.220
+We can use the regular axes functions
+creating labels for the axes and for
+
+34
+00:02:07.220 --> 00:02:08.240
+the figure as a whole.
+
+35
+00:02:09.290 --> 00:02:11.323
+And we can create a legend too.
+
+36
+00:02:11.323 --> 00:02:15.174
+But note that since we didn't label
+the data points as we did with the scatter
+
+37
+00:02:15.174 --> 00:02:18.740
+plot, we need to create legend
+entries when we add the legend itself.
+
+38
+00:02:22.010 --> 00:02:26.690
+This is a good time to introduce
+the fill between function of matplotlib.
+
+39
+00:02:26.690 --> 00:02:30.730
+Now this function isn't specific to line
+plots, but you can see it commonly used
+
+40
+00:02:30.730 --> 00:02:33.410
+with these plots, so
+I'll introduce it in this context.
+
+41
+00:02:34.795 --> 00:02:37.790
+Let's imagine that we want to highlight
+the difference between the green and
+
+42
+00:02:37.790 --> 00:02:38.570
+the blue curves.
+
+43
+00:02:39.610 --> 00:02:43.040
+We could tell the access to paint
+a color between these series
+
+44
+00:02:43.040 --> 00:02:45.380
+using the fill between function.
+
+45
+00:02:45.380 --> 00:02:47.840
+First we get the current axes object,
+
+46
+00:02:47.840 --> 00:02:51.050
+then we indicate the range of
+x values we want to be filled.
+
+47
+00:02:52.230 --> 00:02:55.680
+We didn't specify any x values
+in our call to plot, so
+
+48
+00:02:55.680 --> 00:02:58.709
+we'll just use the same range of
+data points it's already using.
+
+49
+00:03:00.200 --> 00:03:04.485
+Then we'll put in our lower bounds and our
+upper bounds along with the color we want
+
+50
+00:03:04.485 --> 00:03:07.481
+painted and for
+fun I'll include a transparency value.
+
+51
+00:03:07.481 --> 00:03:10.490
+And that's all there is to it.
+
+52
+00:03:10.490 --> 00:03:14.490
+This is a great way to show, for instance,
+the standard deviation of results or
+
+53
+00:03:14.490 --> 00:03:15.160
+error bars.
+
+54
+00:03:16.678 --> 00:03:19.240
+More likely you'll have
+a series of x values and
+
+55
+00:03:19.240 --> 00:03:20.860
+y values which you're looking to plot.
+
+56
+00:03:21.970 --> 00:03:25.675
+Often with line plots this comes in
+the form of date time on the x axes.
+
+57
+00:03:26.750 --> 00:03:30.740
+Let's change our x axis to a series
+of eight date time instances in
+
+58
+00:03:30.740 --> 00:03:31.530
+one day intervals.
+
+59
+00:03:32.630 --> 00:03:33.910
+Let's first create a new image.
+
+60
+00:03:35.510 --> 00:03:40.372
+Then the NumPy arrange function which
+you saw previously is really helpful at
+
+61
+00:03:40.372 --> 00:03:42.840
+sampling some dates for us.
+
+62
+00:03:42.840 --> 00:03:43.510
+We can ask for
+
+63
+00:03:43.510 --> 00:03:48.180
+an arrangement of dates at daily intervals
+just by providing the start and end dates.
+
+64
+00:03:49.900 --> 00:03:51.750
+We can now replot our linear and
+
+65
+00:03:51.750 --> 00:03:53.600
+exponential data against
+this set of dates.
+
+66
+00:04:00.575 --> 00:04:03.500
+That didn't seem to get us the effect
+that we were interested in.
+
+67
+00:04:04.680 --> 00:04:09.040
+This is unfortunately one of the great
+pain points in data science in Python,
+
+68
+00:04:09.040 --> 00:04:10.830
+date time handling.
+
+69
+00:04:10.830 --> 00:04:14.160
+The standard library does it in
+two different ways, while NumPy,
+
+70
+00:04:14.160 --> 00:04:17.480
+which is used for scientific computing,
+does it a third way.
+
+71
+00:04:17.480 --> 00:04:20.260
+In fact, there's probably a dozen
+replacement libraries for
+
+72
+00:04:20.260 --> 00:04:21.410
+date times in Python.
+
+73
+00:04:22.690 --> 00:04:27.180
+The solution I'm going to use here comes
+from a helper library in Pandas called
+
+74
+00:04:27.180 --> 00:04:28.830
+to datetime.
+
+75
+00:04:28.830 --> 00:04:33.202
+This specifically converts NumPy
+dates into standard library dates
+
+76
+00:04:33.202 --> 00:04:35.770
+which is what matplotlib is expecting.
+
+77
+00:04:37.060 --> 00:04:39.780
+Let's first import Pandas
+then create a new figure.
+
+78
+00:04:39.780 --> 00:04:44.670
+And let's arrange our set of dates
+as per the previous code block.
+
+79
+00:04:44.670 --> 00:04:47.122
+Now I could iterate through the list,
+converting them.
+
+80
+00:04:47.122 --> 00:04:50.996
+But instead I'll use the map
+function of the standard library.
+
+81
+00:04:50.996 --> 00:04:55.571
+Which will apply the Pandas to datetime
+against each of the elements in
+
+82
+00:04:55.571 --> 00:04:58.684
+observation_dates, and return the result.
+
+83
+00:04:58.684 --> 00:05:04.967
+Now let's
+
+84
+00:05:04.967 --> 00:05:10.551
+plot that
+
+85
+00:05:10.551 --> 00:05:16.139
+result.
+
+86
+00:05:24.598 --> 00:05:26.650
+That resulted in error.
+
+87
+00:05:26.650 --> 00:05:28.800
+It's a pretty confusing one at that.
+
+88
+00:05:28.800 --> 00:05:32.695
+You see, the problem is the map
+function returns an iterator.
+
+89
+00:05:32.695 --> 00:05:37.020
+Matplotlib can't handle the iterator, so
+we need to convert it to a list first.
+
+90
+00:05:38.050 --> 00:05:41.420
+This is really easy to do, but I wanted
+to demonstrate some of the real-world
+
+91
+00:05:41.420 --> 00:05:45.180
+problems you can run into when you're
+looking to build plots in Python.
+
+92
+00:05:45.180 --> 00:05:48.410
+And why it's important to understand,
+not only the toolkit, but
+
+93
+00:05:48.410 --> 00:05:49.210
+how the language works.
+
+94
+00:05:51.400 --> 00:05:53.030
+Here's a quick fix.
+
+95
+00:05:53.030 --> 00:05:55.660
+We can convert the map result to a list,
+but
+
+96
+00:05:55.660 --> 00:05:58.860
+keep in mind this isn't a very
+memory-efficient way of handling the data.
+
+97
+00:06:02.417 --> 00:06:06.520
+This produces a pretty decent looking
+figure with the data we want.
+
+98
+00:06:06.520 --> 00:06:08.890
+But the dates overlap pretty heavily.
+
+99
+00:06:08.890 --> 00:06:11.100
+Now, there's a couple of
+things that we could do here.
+
+100
+00:06:11.100 --> 00:06:13.198
+For instance, everything is from 2017.
+
+101
+00:06:13.198 --> 00:06:17.200
+So we could iterate through and
+change the labels by stripping the year.
+
+102
+00:06:17.200 --> 00:06:20.810
+And add an x axis label which clarifies
+that it's all for the year of 2017.
+
+103
+00:06:20.810 --> 00:06:23.166
+This is pretty reasonable, but
+
+104
+00:06:23.166 --> 00:06:28.236
+I wanted to show you a couple of
+features of how matplotlib uses text.
+
+105
+00:06:28.236 --> 00:06:33.171
+First we can get a single axis using
+the x-axis or y-axis properties of
+
+106
+00:06:33.171 --> 00:06:38.370
+the axes object which we can get,
+remember, with GCA or get current axis.
+
+107
+00:06:39.798 --> 00:06:43.080
+There are lots of interesting
+properties of the axes object and
+
+108
+00:06:43.080 --> 00:06:44.610
+you use some them in the assignment.
+
+109
+00:06:44.610 --> 00:06:48.263
+For instance; you can get the grid lines,
+the tick locations for
+
+110
+00:06:48.263 --> 00:06:50.330
+both major and minor ticks and so on.
+
+111
+00:06:51.600 --> 00:06:57.980
+Just like all artists, an axes has a bunch
+of children which are themselves artists.
+
+112
+00:06:57.980 --> 00:07:01.344
+In fact, if you're are following along in
+the Jupiter notebook with this lecture
+
+113
+00:07:01.344 --> 00:07:02.866
+why don't you just pause the video.
+
+114
+00:07:02.866 --> 00:07:07.665
+And run the wreck_gc function we
+wrote earlier to explore what kind of
+
+115
+00:07:07.665 --> 00:07:10.850
+artists the x axes object
+actually contains.
+
+116
+00:07:13.800 --> 00:07:15.220
+What I want to show you though,
+
+117
+00:07:15.220 --> 00:07:19.771
+is that you can access the text of the
+tics using the get tick labels function.
+
+118
+00:07:21.040 --> 00:07:25.930
+Each of the tick labels are a text
+object which itself is an artist.
+
+119
+00:07:25.930 --> 00:07:28.730
+This means that you can use a number
+of different artist functions.
+
+120
+00:07:29.750 --> 00:07:33.350
+One specific to text is
+the set rotation function
+
+121
+00:07:33.350 --> 00:07:36.410
+which changes the rotation
+based on degrees.
+
+122
+00:07:36.410 --> 00:07:39.580
+Let's iterate through the axis labels and
+change that.
+
+123
+00:07:42.432 --> 00:07:46.520
+The text is a bit hard to read
+because it just runs off the image.
+
+124
+00:07:46.520 --> 00:07:48.450
+So you can adjust the subplot.
+
+125
+00:07:50.850 --> 00:07:54.836
+And there we go,
+wonderfully readable dates in matplotlib.
+
+126
+00:07:54.836 --> 00:07:57.960
+And when we're talking of text
+let me share one more insight.
+
+127
+00:07:57.960 --> 00:08:02.833
+Matplotlib has a fairly strong connection
+to LaTeX a type setting language
+
+128
+00:08:02.833 --> 00:08:06.510
+used by mathematicians and scientists.
+
+129
+00:08:06.510 --> 00:08:11.465
+This means that you can use a subset
+of LaTeX directly in your labels then
+
+130
+00:08:11.465 --> 00:08:18.838
+matplotlib will render them as
+equations Here, for instance,
+
+131
+00:08:18.838 --> 00:08:24.028
+we can set the title of the axes so
+that there's an x squared directly in it.
+
+132
+00:08:24.028 --> 00:08:27.820
+We do this by escaping to LaTeX
+math mode with dollar signs.
+
+133
+00:08:29.210 --> 00:08:32.670
+Note that this works regardless of
+whether you have LaTeX installed.
+
+134
+00:08:32.670 --> 00:08:34.710
+But with a full LaTeX installation,
+
+135
+00:08:34.710 --> 00:08:37.040
+you have significant control
+over text formatting.
+
+136
+00:08:38.990 --> 00:08:41.030
+Okay, that wraps up line plots.
+
+137
+00:08:41.030 --> 00:08:43.170
+In the next lecture, we'll dive in to
+bar charts and I'll see you there.
